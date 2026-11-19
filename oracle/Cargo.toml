@@ -1,0 +1,30 @@
+[package]
+name = "x13-oracle"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+publish = false
+
+# The parity table is opt-in: it needs `x13as_ascii` on PATH and takes minutes,
+# so `test = false` keeps it out of `cargo test --workspace` and `--all-targets`.
+# Run it with `cargo test -p x13-oracle --profile parity --test parity`, and lint
+# it with `cargo clippy -p x13-oracle --test parity`.
+[[test]]
+name = "parity"
+path = "tests/parity.rs"
+test = false
+
+[dependencies]
+anyhow = "1.0.104"
+chrono = "0.4.45"
+clap = { version = "4.6.6", features = ["derive"] }
+csv.workspace = true
+globset.workspace = true
+rayon.workspace = true
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = { workspace = true, features = ["float_roundtrip"] }
+sha2.workspace = true
+tempfile.workspace = true
+thiserror.workspace = true
+toml.workspace = true
+x13 = { path = "..", features = ["__conditioning-scales"] }

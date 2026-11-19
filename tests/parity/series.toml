@@ -1,0 +1,6917 @@
+# The FRED corpus of the parity harness.
+# Every series comes from a U.S. federal agency (public domain) via
+# https://fred.stlouisfed.org/graph/fredgraph.csv?id=<id>. Files keep FRED's
+# CSV layout, gaps included, capped at the most recent 780 observations
+# (Build 62 POBS). `missing` lists the empty months or quarters; BLS skipped
+# October 2025 during the shutdown.
+# `truncated = true` marks series deliberately cut to a 6-10 year span.
+# `downloaded` is the date each file was fetched. Refetching changes the
+# corpus, so it is done on purpose and never as a side effect.
+
+[[series]]
+id = "AIRRPMTSID11"
+title = "Air Revenue Passenger Miles"
+source = "U.S. Bureau of Transportation Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Thousands"
+start = "2000-01"
+end = "2026-06"
+observations = 318
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "AKURN"
+title = "Unemployment Rate in Alaska"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1976-01"
+end = "2026-08"
+observations = 608
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "AMTMNO"
+title = "Manufacturers' New Orders: Total Manufacturing"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Millions of Dollars"
+start = "1992-02"
+end = "2026-08"
+observations = 415
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "APU0000702111"
+title = "Average Price: Bread, White, Pan (Cost per Pound/453.6 Grams) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "1980-01"
+end = "2026-09"
+observations = 561
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "APU0000703112"
+title = "Average Price: Ground Beef, 100% Beef (Cost per Pound/453.6 Grams) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "1984-01"
+end = "2026-09"
+observations = 513
+values = "positive"
+missing = ["2012-10", "2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "APU0000704111"
+title = "Average Price: Bacon, Sliced (Cost per Pound/453.6 Grams) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "1980-01"
+end = "2026-09"
+observations = 561
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "APU0000706111"
+title = "Average Price: Chicken, Fresh, Whole (Cost per Pound/453.6 Grams) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "1980-01"
+end = "2026-09"
+observations = 561
+values = "positive"
+missing = ["2020-05", "2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "APU0000708111"
+title = "Average Price: Eggs, Grade A, Large (Cost per Dozen) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "1980-01"
+end = "2026-09"
+observations = 561
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "APU0000709112"
+title = "Average Price: Milk, Fresh, Whole, Fortified (Cost per Gallon/3.8 Liters) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "1995-07"
+end = "2026-09"
+observations = 375
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "APU0000710211"
+title = "Average Price: American Processed Cheese (Cost per Pound/453.6 Grams) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "1984-01"
+end = "2026-09"
+observations = 513
+values = "positive"
+missing = ["1987-02", "1989-07", "1989-08", "1989-09", "1989-10", "1989-11", "1989-12", "1990-01", "1990-02", "1990-03", "1990-04", "1990-05", "1990-06", "1990-07", "1990-08", "1990-09", "1990-10", "1990-11", "1990-12", "2018-11", "2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "APU0000711211"
+title = "Average Price: Bananas (Cost per Pound/453.6 Grams) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "2016-10"
+end = "2026-09"
+observations = 120
+values = "positive"
+truncated = true
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "APU0000711311"
+title = "Average Price: Oranges, Navel (Cost per Pound/453.6 Grams) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "1980-01"
+end = "2026-09"
+observations = 561
+values = "positive"
+missing = ["1980-06", "1980-07", "1980-08", "1980-09", "1980-10", "1980-11", "1981-07", "1981-08", "1981-09", "1981-10", "1981-11", "1982-05", "1982-06", "1982-07", "1982-08", "1982-09", "1982-10", "1982-11", "1983-07", "1983-08", "1983-09", "1983-10", "1983-11", "1984-06", "1984-07", "1984-08", "1984-09", "1984-10", "1985-06", "1985-07", "1985-08", "1985-09", "1985-10", "1985-11", "1986-06", "1986-07", "1986-08", "1986-09", "1986-10", "1987-01", "1987-02", "1987-06", "1987-07", "1987-08", "1987-09", "1987-10", "1988-06", "1988-07", "1988-08", "1988-09", "1988-10", "1988-11", "1989-06", "1989-07", "1989-08", "1989-09", "1989-10", "1990-07", "1990-08", "1990-09", "1990-10", "1991-03", "1991-04", "1991-05", "1991-06", "1991-07", "1991-08", "1991-09", "1991-10", "1992-06", "1992-07", "1992-08", "1992-09", "1992-10", "1993-06", "1993-07", "1993-08", "1993-09", "1993-10", "1994-06", "1994-07", "1994-08", "1994-09", "1994-10", "1995-06", "1995-07", "1995-08", "1995-09", "1995-10", "1996-06", "1996-07", "1996-08", "1996-09", "1996-10", "1997-06", "1997-07", "1997-08", "1997-09", "1997-10", "1998-06", "1998-07", "1998-08", "1998-09", "1998-10", "1998-11", "1999-05", "1999-06", "1999-07", "1999-08", "1999-09", "1999-10", "2000-07", "2000-08", "2000-09", "2000-10", "2001-06", "2001-07", "2001-08", "2001-09", "2001-10", "2002-06", "2002-07", "2002-08", "2002-09", "2003-07", "2003-08", "2003-09", "2004-07", "2004-08", "2004-10", "2005-07", "2005-08", "2006-08", "2007-07", "2020-04", "2020-07", "2020-08", "2020-09", "2020-10", "2020-11", "2021-07", "2021-08", "2021-09", "2022-07", "2025-07", "2025-10", "2025-11", "2026-07"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "APU0000711415"
+title = "Average Price: Strawberries, Dry Pint (Cost per 12 Ounces/340.2 Grams) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "1980-04"
+end = "2026-09"
+observations = 558
+values = "positive"
+missing = ["1980-07", "1980-08", "1980-09", "1980-10", "1980-11", "1980-12", "1981-01", "1981-02", "1981-08", "1981-09", "1981-10", "1981-11", "1981-12", "1982-01", "1982-02", "1982-08", "1982-09", "1982-10", "1982-11", "1982-12", "1983-01", "1983-02", "1983-03", "1983-08", "1983-09", "1983-10", "1983-11", "1983-12", "1984-01", "1984-02", "1984-09", "1984-10", "1984-11", "1984-12", "1985-01", "1985-02", "1985-08", "1985-09", "1985-10", "1985-11", "1985-12", "1986-01", "1986-02", "1986-09", "1986-10", "1986-11", "1986-12", "1987-01", "1987-02", "1987-03", "1987-09", "1987-10", "1987-11", "1987-12", "1988-01", "1988-02", "1988-10", "1988-11", "1988-12", "1989-01", "1989-02", "1989-10", "1989-11", "1989-12", "1990-01", "1990-10", "1990-11", "1990-12", "1991-01", "1991-11", "1991-12", "1992-01", "1992-11", "1992-12", "1993-01", "1993-11", "1993-12", "1994-01", "1994-11", "1994-12", "1995-01", "1995-11", "1995-12", "1996-11", "1996-12", "1997-01", "1997-10", "1997-12", "1998-11", "1998-12", "1999-01", "1999-12", "2000-11", "2000-12", "2001-01", "2002-12", "2003-01", "2003-12", "2013-10", "2015-11", "2020-04", "2021-12", "2025-10", "2025-11"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "APU0000712112"
+title = "Average Price: Potatoes, White (Cost per Pound/453.6 Grams) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "1986-03"
+end = "2026-09"
+observations = 487
+values = "positive"
+missing = ["1987-01", "1987-02", "2020-03", "2020-04", "2025-10", "2025-11"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "APU0000712311"
+title = "Average Price: Tomatoes, Field Grown (Cost per Pound/453.6 Grams) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "1980-01"
+end = "2026-09"
+observations = 561
+values = "positive"
+missing = ["1987-01", "1987-02", "2013-10", "2020-03", "2020-04", "2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "APU0000715211"
+title = "Average Price: Sugar, White, All Sizes (Cost per Pound/453.6 Grams) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "1980-01"
+end = "2026-09"
+observations = 561
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "APU0000717311"
+title = "Average Price: Coffee, 100%, Ground Roast, All Sizes (Cost per Pound/453.6 Grams) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "1980-01"
+end = "2026-09"
+observations = 561
+values = "positive"
+missing = ["2007-09", "2007-10", "2008-01", "2008-02", "2008-03", "2008-04", "2008-05", "2008-06", "2008-07", "2008-08", "2008-09", "2008-10", "2008-11", "2008-12", "2009-01", "2009-02", "2009-03", "2009-04", "2009-05", "2009-06", "2009-07", "2009-08", "2009-09", "2009-10", "2009-11", "2018-06", "2018-07", "2018-08", "2018-10", "2018-11", "2018-12", "2019-01", "2019-02", "2019-03", "2019-04", "2019-05", "2019-06", "2019-07", "2019-08", "2019-09", "2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "APU000072610"
+title = "Average Price: Electricity per Kilowatt-Hour in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "2020-10"
+end = "2026-09"
+observations = 72
+values = "positive"
+truncated = true
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "APU000074714"
+title = "Average Price: Gasoline, Unleaded Regular (Cost per Gallon/3.785 Liters) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "1976-01"
+end = "2026-09"
+observations = 609
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "APU0000FF1101"
+title = "Average Price: Chicken Breast, Boneless (Cost per Pound/453.6 Grams) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "2006-01"
+end = "2026-09"
+observations = 249
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "ASPNHSUS"
+title = "Average Sales Price for New Houses Sold in the United States"
+source = "U.S. Census Bureau; U.S. Department of Housing and Urban Development"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Dollars"
+start = "1975-01"
+end = "2026-08"
+observations = 620
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "AWHMAN"
+title = "Average Weekly Hours of Production and Nonsupervisory Employees, Manufacturing"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Hours"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "BABATOTALNSAUS"
+title = "Business Applications: Total for All NAICS in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Number"
+start = "2004-07"
+end = "2026-09"
+observations = 267
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "BACBATOTALNSAUS"
+title = "Business Applications from Corporations: Total for All NAICS in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Number"
+start = "2004-07"
+end = "2026-09"
+observations = 267
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "BAHBATOTALNSAUS"
+title = "High-Propensity Business Applications: Total for All NAICS in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Number"
+start = "2004-07"
+end = "2026-09"
+observations = 267
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "BAWBATOTALNSAUS"
+title = "Business Applications with Planned Wages: Total for All NAICS in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Number"
+start = "2004-07"
+end = "2026-09"
+observations = 267
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "BOGMBASE"
+title = "Monetary Base: Total"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Billions of Dollars"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "BOPGSTB"
+title = "Trade Balance: Goods and Services, Balance of Payments Basis"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "BOPGTB"
+title = "Trade Balance: Goods, Balance of Payments Basis"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "BUSINV"
+title = "Total Business Inventories"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-07"
+observations = 415
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CAURN"
+title = "Unemployment Rate in California"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2018-09"
+end = "2026-08"
+observations = 96
+values = "positive"
+truncated = true
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CES0500000003"
+title = "Average Hourly Earnings of All Employees, Total Private"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Dollars per Hour"
+start = "2006-03"
+end = "2026-09"
+observations = 247
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CEU0500000002"
+title = "Average Weekly Hours of All Employees, Total Private"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Hours"
+start = "2006-03"
+end = "2026-09"
+observations = 247
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CEU0500000003"
+title = "Average Hourly Earnings of All Employees, Total Private"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Dollars per Hour"
+start = "2006-03"
+end = "2026-09"
+observations = 247
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CEU2000000002"
+title = "Average Weekly Hours of All Employees, Construction"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Hours"
+start = "2006-03"
+end = "2026-09"
+observations = 247
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CEU3000000002"
+title = "Average Weekly Hours of All Employees, Manufacturing"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Hours"
+start = "2006-03"
+end = "2026-09"
+observations = 247
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CEU4244800001"
+title = "All Employees, Clothing, Clothing Accessories, Shoe, and Jewelry Retailers"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Persons"
+start = "2020-10"
+end = "2026-09"
+observations = 72
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CEU7000000002"
+title = "Average Weekly Hours of All Employees, Leisure and Hospitality"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Hours"
+start = "2006-03"
+end = "2026-09"
+observations = 247
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CEU9091000001"
+title = "All Employees, Federal"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Persons"
+start = "2019-10"
+end = "2026-09"
+observations = 84
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CEU9092000001"
+title = "All Employees, State Government"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Persons"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CEU9092161101"
+title = "All Employees, State Government Education"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Persons"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CEU9093000001"
+title = "All Employees, Local Government"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Persons"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CEU9093161101"
+title = "All Employees, Local Government Education"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Persons"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CIVPART"
+title = "Labor Force Participation Rate"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Percent"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "COMPU1UNSA"
+title = "New Privately-Owned Housing Units Completed: Single-Family Units"
+source = "U.S. Census Bureau; U.S. Department of Housing and Urban Development"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "1968-01"
+end = "2026-08"
+observations = 704
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "COMPU5MUNSA"
+title = "New Privately-Owned Housing Units Completed: Units in Buildings with 5 Units or More"
+source = "U.S. Census Bureau; U.S. Department of Housing and Urban Development"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "1968-01"
+end = "2026-08"
+observations = 704
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "COMPUTNSA"
+title = "New Privately-Owned Housing Units Completed: Total Units"
+source = "U.S. Census Bureau; U.S. Department of Housing and Urban Development"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "1968-01"
+end = "2026-08"
+observations = 704
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CURRNS"
+title = "Currency Component of M1"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Billions of Dollars"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CUUR0000SEHA"
+title = "Consumer Price Index for All Urban Consumers: Rent of Primary Residence in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 1982-1984=100"
+start = "2018-10"
+end = "2026-09"
+observations = 96
+values = "positive"
+truncated = true
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CUUR0000SEHB"
+title = "Consumer Price Index for All Urban Consumers: Lodging Away from Home in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Dec 1997=100"
+start = "1997-12"
+end = "2026-09"
+observations = 346
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CUUR0000SEHC"
+title = "Consumer Price Index for All Urban Consumers: Owners' Equivalent Rent of Residences in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Dec 1982=100"
+start = "2019-10"
+end = "2026-09"
+observations = 84
+values = "positive"
+truncated = true
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CUUR0000SEHF01"
+title = "Consumer Price Index for All Urban Consumers: Electricity in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 1982-1984=100"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CUUR0000SEHF02"
+title = "Consumer Price Index for All Urban Consumers: Utility (Piped) Gas Service in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 1982-1984=100"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CUUR0000SETA01"
+title = "Consumer Price Index for All Urban Consumers: New Vehicles in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 1982-1984=100"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CUUR0100SA0"
+title = "Consumer Price Index for All Urban Consumers: All Items in Northeast"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 1982-1984=100"
+start = "1966-12"
+end = "2026-09"
+observations = 718
+values = "positive"
+missing = ["1967-01", "1967-02", "1967-04", "1967-05", "1967-07", "1967-08", "1967-10", "1967-11", "1968-01", "1968-02", "1968-04", "1968-05", "1968-07", "1968-08", "1968-10", "1968-11", "1969-01", "1969-02", "1969-04", "1969-05", "1969-07", "1969-08", "1969-10", "1969-11", "1970-01", "1970-02", "1970-04", "1970-05", "1970-07", "1970-08", "1970-10", "1970-11", "1971-01", "1971-02", "1971-04", "1971-05", "1971-07", "1971-08", "1971-10", "1971-11", "1972-01", "1972-02", "1972-04", "1972-05", "1972-07", "1972-08", "1972-10", "1972-11", "1973-01", "1973-02", "1973-04", "1973-05", "1973-07", "1973-08", "1973-10", "1973-11", "1974-01", "1974-02", "1974-04", "1974-05", "1974-07", "1974-08", "1974-10", "1974-11", "1975-01", "1975-02", "1975-04", "1975-05", "1975-07", "1975-08", "1975-10", "1975-11", "1976-01", "1976-02", "1976-04", "1976-05", "1976-07", "1976-08", "1976-10", "1976-11", "1977-01", "1977-02", "1977-04", "1977-05", "1977-07", "1977-08", "1977-10", "1977-11", "1978-01", "1978-03", "1978-05", "1978-07", "1978-09", "1978-11", "1979-01", "1979-03", "1979-05", "1979-07", "1979-09", "1979-11", "1980-01", "1980-03", "1980-05", "1980-07", "1980-09", "1980-11", "1981-01", "1981-03", "1981-05", "1981-07", "1981-09", "1981-11", "1982-01", "1982-03", "1982-05", "1982-07", "1982-09", "1982-11", "1983-01", "1983-03", "1983-05", "1983-07", "1983-09", "1983-11", "1984-01", "1984-03", "1984-05", "1984-07", "1984-09", "1984-11", "1985-01", "1985-03", "1985-05", "1985-07", "1985-09", "1985-11", "1986-01", "1986-03", "1986-05", "1986-07", "1986-09", "1986-11", "2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CUUR0200SA0"
+title = "Consumer Price Index for All Urban Consumers: All Items in Midwest"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 1982-1984=100"
+start = "1966-12"
+end = "2026-09"
+observations = 718
+values = "positive"
+missing = ["1967-01", "1967-02", "1967-04", "1967-05", "1967-07", "1967-08", "1967-10", "1967-11", "1968-01", "1968-02", "1968-04", "1968-05", "1968-07", "1968-08", "1968-10", "1968-11", "1969-01", "1969-02", "1969-04", "1969-05", "1969-07", "1969-08", "1969-10", "1969-11", "1970-01", "1970-02", "1970-04", "1970-05", "1970-07", "1970-08", "1970-10", "1970-11", "1971-01", "1971-02", "1971-04", "1971-05", "1971-07", "1971-08", "1971-10", "1971-11", "1972-01", "1972-02", "1972-04", "1972-05", "1972-07", "1972-08", "1972-10", "1972-11", "1973-01", "1973-02", "1973-04", "1973-05", "1973-07", "1973-08", "1973-10", "1973-11", "1974-01", "1974-02", "1974-04", "1974-05", "1974-07", "1974-08", "1974-10", "1974-11", "1975-01", "1975-02", "1975-04", "1975-05", "1975-07", "1975-08", "1975-10", "1975-11", "1976-01", "1976-02", "1976-04", "1976-05", "1976-07", "1976-08", "1976-10", "1976-11", "1977-01", "1977-02", "1977-04", "1977-05", "1977-07", "1977-08", "1977-10", "1977-11", "1978-01", "1978-03", "1978-05", "1978-07", "1978-09", "1978-11", "1979-01", "1979-03", "1979-05", "1979-07", "1979-09", "1979-11", "1980-01", "1980-03", "1980-05", "1980-07", "1980-09", "1980-11", "1981-01", "1981-03", "1981-05", "1981-07", "1981-09", "1981-11", "1982-01", "1982-03", "1982-05", "1982-07", "1982-09", "1982-11", "1983-01", "1983-03", "1983-05", "1983-07", "1983-09", "1983-11", "1984-01", "1984-03", "1984-05", "1984-07", "1984-09", "1984-11", "1985-01", "1985-03", "1985-05", "1985-07", "1985-09", "1985-11", "1986-01", "1986-03", "1986-05", "1986-07", "1986-09", "1986-11", "2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CUUR0300SA0"
+title = "Consumer Price Index for All Urban Consumers: All Items in South"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 1982-1984=100"
+start = "1966-12"
+end = "2026-09"
+observations = 718
+values = "positive"
+missing = ["1967-01", "1967-02", "1967-04", "1967-05", "1967-07", "1967-08", "1967-10", "1967-11", "1968-01", "1968-02", "1968-04", "1968-05", "1968-07", "1968-08", "1968-10", "1968-11", "1969-01", "1969-02", "1969-04", "1969-05", "1969-07", "1969-08", "1969-10", "1969-11", "1970-01", "1970-02", "1970-04", "1970-05", "1970-07", "1970-08", "1970-10", "1970-11", "1971-01", "1971-02", "1971-04", "1971-05", "1971-07", "1971-08", "1971-10", "1971-11", "1972-01", "1972-02", "1972-04", "1972-05", "1972-07", "1972-08", "1972-10", "1972-11", "1973-01", "1973-02", "1973-04", "1973-05", "1973-07", "1973-08", "1973-10", "1973-11", "1974-01", "1974-02", "1974-04", "1974-05", "1974-07", "1974-08", "1974-10", "1974-11", "1975-01", "1975-02", "1975-04", "1975-05", "1975-07", "1975-08", "1975-10", "1975-11", "1976-01", "1976-02", "1976-04", "1976-05", "1976-07", "1976-08", "1976-10", "1976-11", "1977-01", "1977-02", "1977-04", "1977-05", "1977-07", "1977-08", "1977-10", "1977-11", "1978-01", "1978-03", "1978-05", "1978-07", "1978-09", "1978-11", "1979-01", "1979-03", "1979-05", "1979-07", "1979-09", "1979-11", "1980-01", "1980-03", "1980-05", "1980-07", "1980-09", "1980-11", "1981-01", "1981-03", "1981-05", "1981-07", "1981-09", "1981-11", "1982-01", "1982-03", "1982-05", "1982-07", "1982-09", "1982-11", "1983-01", "1983-03", "1983-05", "1983-07", "1983-09", "1983-11", "1984-01", "1984-03", "1984-05", "1984-07", "1984-09", "1984-11", "1985-01", "1985-03", "1985-05", "1985-07", "1985-09", "1985-11", "1986-01", "1986-03", "1986-05", "1986-07", "1986-09", "1986-11", "2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CUUR0400SA0"
+title = "Consumer Price Index for All Urban Consumers: All Items in West"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 1982-1984=100"
+start = "1966-12"
+end = "2026-09"
+observations = 718
+values = "positive"
+missing = ["1967-01", "1967-02", "1967-04", "1967-05", "1967-07", "1967-08", "1967-10", "1967-11", "1968-01", "1968-02", "1968-04", "1968-05", "1968-07", "1968-08", "1968-10", "1968-11", "1969-01", "1969-02", "1969-04", "1969-05", "1969-07", "1969-08", "1969-10", "1969-11", "1970-01", "1970-02", "1970-04", "1970-05", "1970-07", "1970-08", "1970-10", "1970-11", "1971-01", "1971-02", "1971-04", "1971-05", "1971-07", "1971-08", "1971-10", "1971-11", "1972-01", "1972-02", "1972-04", "1972-05", "1972-07", "1972-08", "1972-10", "1972-11", "1973-01", "1973-02", "1973-04", "1973-05", "1973-07", "1973-08", "1973-10", "1973-11", "1974-01", "1974-02", "1974-04", "1974-05", "1974-07", "1974-08", "1974-10", "1974-11", "1975-01", "1975-02", "1975-04", "1975-05", "1975-07", "1975-08", "1975-10", "1975-11", "1976-01", "1976-02", "1976-04", "1976-05", "1976-07", "1976-08", "1976-10", "1976-11", "1977-01", "1977-02", "1977-04", "1977-05", "1977-07", "1977-08", "1977-10", "1977-11", "1978-01", "1978-03", "1978-05", "1978-07", "1978-09", "1978-11", "1979-01", "1979-03", "1979-05", "1979-07", "1979-09", "1979-11", "1980-01", "1980-03", "1980-05", "1980-07", "1980-09", "1980-11", "1981-01", "1981-03", "1981-05", "1981-07", "1981-09", "1981-11", "1982-01", "1982-03", "1982-05", "1982-07", "1982-09", "1982-11", "1983-01", "1983-03", "1983-05", "1983-07", "1983-09", "1983-11", "1984-01", "1984-03", "1984-05", "1984-07", "1984-09", "1984-11", "1985-01", "1985-03", "1985-05", "1985-07", "1985-09", "1985-11", "1986-01", "1986-03", "1986-05", "1986-07", "1986-09", "1986-11", "2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CUURA101SA0"
+title = "Consumer Price Index for All Urban Consumers: All Items in New York-Newark-Jersey City, NY-NJ-PA (CBSA)"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 1982-1984=100"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CUURA207SA0"
+title = "Consumer Price Index for All Urban Consumers: All Items in Chicago-Naperville-Elgin, IL-IN-WI (CBSA)"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 1982-1984=100"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "DAUTONSA"
+title = "Motor Vehicle Retail Sales: Domestic Autos"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "1967-01"
+end = "2026-09"
+observations = 717
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "DEMDEPNS"
+title = "Demand Deposits"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Billions of Dollars"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "DGORDER"
+title = "Manufacturers' New Orders: Durable Goods"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Millions of Dollars"
+start = "1992-02"
+end = "2026-08"
+observations = 415
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "EMRATIO"
+title = "Employment-Population Ratio"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Percent"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "ENPLANED11"
+title = "Enplanements for U.S. Air Carrier Domestic and International, Scheduled Passenger Flights"
+source = "U.S. Bureau of Transportation Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Thousands"
+start = "2000-01"
+end = "2026-06"
+observations = 318
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "EXP3510"
+title = "U.S. Exports of Goods by F.A.S. Basis to Brazil"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1985-01"
+end = "2026-08"
+observations = 500
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "EXP5330"
+title = "U.S. Exports of Goods by F.A.S. Basis to India"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1985-01"
+end = "2026-08"
+observations = 500
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "EXP5520"
+title = "U.S. Exports of Goods by F.A.S. Basis to Vietnam"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "EXP5830"
+title = "U.S. Exports of Goods by F.A.S. Basis to Taiwan"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1985-01"
+end = "2026-08"
+observations = 500
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "EXPCH"
+title = "U.S. Exports of Goods by F.A.S. Basis to Mainland China"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2016-09"
+end = "2026-08"
+observations = 120
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "FAUTONSA"
+title = "Motor Vehicle Retail Sales: Foreign Autos"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "1967-01"
+end = "2026-09"
+observations = 717
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "FEDFUNDS"
+title = "Federal Funds Effective Rate"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "FII10"
+title = "Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis, Inflation-Indexed"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2003-01"
+end = "2026-09"
+observations = 285
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "FII20"
+title = "Market Yield on U.S. Treasury Securities at 20-Year Constant Maturity, Quoted on an Investment Basis, Inflation-Indexed"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2004-07"
+end = "2026-09"
+observations = 267
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "FII30"
+title = "Market Yield on U.S. Treasury Securities at 30-Year Constant Maturity, Quoted on an Investment Basis, Inflation-Indexed"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2010-02"
+end = "2026-09"
+observations = 200
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "FII5"
+title = "Market Yield on U.S. Treasury Securities at 5-Year Constant Maturity, Quoted on an Investment Basis, Inflation-Indexed"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2003-01"
+end = "2026-09"
+observations = 285
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "GASDESM"
+title = "US Diesel Sales Price"
+source = "U.S. Energy Information Administration"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Dollars per Gallon"
+start = "1994-04"
+end = "2026-09"
+observations = 390
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "GASREGCOVM"
+title = "US Regular Conventional Gas Price"
+source = "U.S. Energy Information Administration"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Dollars per Gallon"
+start = "1990-09"
+end = "2026-09"
+observations = 433
+values = "positive"
+missing = ["1990-12", "1991-01"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "GS30"
+title = "Market Yield on U.S. Treasury Securities at 30-Year Constant Maturity, Quoted on an Investment Basis"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1977-02"
+end = "2026-09"
+observations = 596
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "HOUST5FNSA"
+title = "New Privately-Owned Housing Units Started: Units in Buildings with 5 Units or More"
+source = "U.S. Census Bureau; U.S. Department of Housing and Urban Development"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "2019-09"
+end = "2026-08"
+observations = 84
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "HOUSTNSA"
+title = "New Privately-Owned Housing Units Started: Total Units"
+source = "U.S. Census Bureau; U.S. Department of Housing and Urban Development"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "2018-09"
+end = "2026-08"
+observations = 96
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "HOUSTSNSA"
+title = "New Privately-Owned Housing Units Started: Total Units in the South Census Region"
+source = "U.S. Census Bureau; U.S. Department of Housing and Urban Development"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "HOUSTWNSA"
+title = "New Privately-Owned Housing Units Started: Total Units in the West Census Region"
+source = "U.S. Census Bureau; U.S. Department of Housing and Urban Development"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "HTRUCKSNSA"
+title = "Motor Vehicle Retail Sales: Heavy Weight Trucks"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "1967-01"
+end = "2026-09"
+observations = 717
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IMP3510"
+title = "U.S. Imports of Goods by Customs Basis from Brazil"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1985-01"
+end = "2026-08"
+observations = 500
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IMP5330"
+title = "U.S. Imports of Goods by Customs Basis from India"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1985-01"
+end = "2026-08"
+observations = 500
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IMP5520"
+title = "U.S. Imports of Goods by Customs Basis from Vietnam"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "zeros"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IMP5830"
+title = "U.S. Imports of Goods by Customs Basis from Taiwan"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1985-01"
+end = "2026-08"
+observations = 500
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IMPCH"
+title = "U.S. Imports of Goods by Customs Basis from China"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1985-01"
+end = "2026-08"
+observations = 500
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IPB50001N"
+title = "Industrial Production: Total Index"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 2017=100"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IPG211N"
+title = "Industrial Production: Mining: Oil and Gas Extraction (NAICS = 211)"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 2017=100"
+start = "1972-01"
+end = "2026-08"
+observations = 656
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IPG212N"
+title = "Industrial Production: Mining: Mining (Except Oil and Gas) (NAICS = 212)"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 2017=100"
+start = "1972-01"
+end = "2026-08"
+observations = 656
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IPG2211N"
+title = "Industrial Production: Utilities: Electric Power Generation, Transmission, and Distribution (NAICS = 2211)"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 2017=100"
+start = "1972-01"
+end = "2026-08"
+observations = 656
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IPG3361T3N"
+title = "Industrial Production: Manufacturing: Durable Goods: Motor Vehicles and Parts (NAICS = 3361-3)"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 2017=100"
+start = "2020-09"
+end = "2026-08"
+observations = 72
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IPG336N"
+title = "Industrial Production: Manufacturing: Durable Goods: Transportation Equipment (NAICS = 336)"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 2017=100"
+start = "1972-01"
+end = "2026-08"
+observations = 656
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IPG337N"
+title = "Industrial Production: Manufacturing: Durable Goods: Furniture and Related Product (NAICS = 337)"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 2017=100"
+start = "1972-01"
+end = "2026-08"
+observations = 656
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IPG339N"
+title = "Industrial Production: Manufacturing: Durable Goods: Miscellaneous (NAICS = 339)"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 2017=100"
+start = "1972-01"
+end = "2026-08"
+observations = 656
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IPN31152N"
+title = "Industrial Production: Manufacturing: Nondurable Goods: Ice Cream and Frozen Dessert (NAICS = 31152)"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 2017=100"
+start = "1972-01"
+end = "2026-07"
+observations = 655
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IPN3311A2RN"
+title = "Industrial Production: Manufacturing: Durable Goods: Raw Steel (NAICS = 3311,2pt.)"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 2017=100"
+start = "1972-01"
+end = "2026-07"
+observations = 655
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IQ"
+title = "Export Price Index (End Use): All Commodities"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 2000=100"
+start = "1983-09"
+end = "2026-08"
+observations = 516
+values = "positive"
+missing = ["1983-10", "1983-11", "1984-01", "1984-02", "1984-04", "1984-05", "1984-07", "1984-08", "1984-10", "1984-11", "1985-01", "1985-02", "1985-04", "1985-05", "1985-07", "1985-08", "1985-10", "1985-11", "1986-01", "1986-02", "1986-04", "1986-05", "1986-07", "1986-08", "1986-10", "1986-11", "1987-01", "1987-02", "1987-04", "1987-05", "1987-07", "1987-08", "1987-10", "1987-11", "1988-01", "1988-02", "1988-04", "1988-05", "1988-07", "1988-08", "1988-10", "1988-11", "2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IR"
+title = "Import Price Index (End Use): All Commodities"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 2000=100"
+start = "2017-09"
+end = "2026-08"
+observations = 108
+values = "positive"
+truncated = true
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "ISRATIO"
+title = "Total Business: Inventories to Sales Ratio"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Ratio"
+start = "1992-01"
+end = "2026-07"
+observations = 415
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "JTUHIL"
+title = "Hires: Total Nonfarm"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Level in Thousands"
+start = "2000-12"
+end = "2026-08"
+observations = 309
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "JTUJOL"
+title = "Job Openings: Total Nonfarm"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Level in Thousands"
+start = "2000-12"
+end = "2026-08"
+observations = 309
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "JTULDL"
+title = "Layoffs and Discharges: Total Nonfarm"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Level in Thousands"
+start = "2000-12"
+end = "2026-08"
+observations = 309
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "JTUQUL"
+title = "Quits: Total Nonfarm"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Level in Thousands"
+start = "2000-12"
+end = "2026-08"
+observations = 309
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "JTUTSL"
+title = "Total Separations: Total Nonfarm"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Level in Thousands"
+start = "2000-12"
+end = "2026-08"
+observations = 309
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "LAUTONSA"
+title = "Motor Vehicle Retail Sales: Domestic and Foreign Autos"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "1976-01"
+end = "2026-09"
+observations = 609
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "LNU04000024"
+title = "Unemployment Rate - 20 Yrs. & over"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2017-10"
+end = "2026-09"
+observations = 108
+values = "positive"
+truncated = true
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "LNU04000025"
+title = "Unemployment Rate - 20 Yrs. & over, Men"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "LNU04000026"
+title = "Unemployment Rate - 20 Yrs. & over, Women"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "LNU04000036"
+title = "Unemployment Rate - 20-24 Yrs."
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "LNU04027659"
+title = "Unemployment Rate - Less Than a High School Diploma, 25 Yrs. & over"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1992-01"
+end = "2026-09"
+observations = 417
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "LNU04032229"
+title = "Unemployment Rate - Nonagriculture, Private Wage and Salary Workers"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "LNU04032231"
+title = "Unemployment Rate - Construction Industry, Private Wage and Salary Workers"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2000-01"
+end = "2026-09"
+observations = 321
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "LNU04032232"
+title = "Unemployment Rate - Manufacturing Industry, Private Wage and Salary Workers"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2000-01"
+end = "2026-09"
+observations = 321
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "LNU04032239"
+title = "Unemployment Rate - Professional and Business Services Industry, Private Wage and Salary Workers"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2000-01"
+end = "2026-09"
+observations = 321
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "LOADFACTORD11"
+title = "Load Factor for U.S. Air Carrier Domestic and International, Scheduled Passenger Flights"
+source = "U.S. Bureau of Transportation Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Percent"
+start = "2000-01"
+end = "2026-06"
+observations = 318
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "LTRUCKNSA"
+title = "Motor Vehicle Retail Sales: Light Weight Trucks"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "1976-01"
+end = "2026-09"
+observations = 609
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "M1NS"
+title = "M1"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Billions of Dollars"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "M2NS"
+title = "M2"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Billions of Dollars"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "MCOILBRENTEU"
+title = "Crude Oil Prices: Brent - Europe"
+source = "U.S. Energy Information Administration"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Dollars per Barrel"
+start = "1987-05"
+end = "2026-09"
+observations = 473
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "MCOILWTICO"
+title = "Crude Oil Prices: West Texas Intermediate (WTI) - Cushing, Oklahoma"
+source = "U.S. Energy Information Administration"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Dollars per Barrel"
+start = "1986-01"
+end = "2026-09"
+observations = 489
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "MHHNGSP"
+title = "Henry Hub Natural Gas Spot Price"
+source = "U.S. Energy Information Administration"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Dollars per Million BTU"
+start = "1997-01"
+end = "2026-09"
+observations = 357
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "MJFUELUSGULF"
+title = "Kerosene-Type Jet Fuel Prices: U.S. Gulf Coast"
+source = "U.S. Energy Information Administration"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Dollars per Gallon"
+start = "1990-04"
+end = "2026-08"
+observations = 437
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "MRTSSM44000USN"
+title = "Retail Sales: Retail Trade"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-07"
+observations = 415
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "MRTSSM4411USN"
+title = "Retail Sales: Automobile Dealers"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-07"
+observations = 415
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "MRTSSM4413USN"
+title = "Retail Sales: Automotive Parts, Accessory, and Tire Stores"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-07"
+observations = 415
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "MRTSSM441USN"
+title = "Retail Sales: Motor Vehicle and Parts Dealers"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2016-08"
+end = "2026-07"
+observations = 120
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "MRTSSM4529USN"
+title = "Retail Sales: Other General Merchandise Stores (DISCONTINUED)"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2025-02"
+observations = 398
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "MTSDS133FMS"
+title = "Federal Surplus or Deficit [-]"
+source = "U.S. Department of the Treasury. Fiscal Service"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1980-10"
+end = "2026-08"
+observations = 551
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "MTSO133FMS"
+title = "Total Federal Outlays"
+source = "U.S. Department of the Treasury. Fiscal Service"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1980-10"
+end = "2026-08"
+observations = 551
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "MTSR133FMS"
+title = "Total Federal Receipts"
+source = "U.S. Department of the Treasury. Fiscal Service"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1980-10"
+end = "2026-08"
+observations = 551
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "NDFACBM027NBOG"
+title = "Net Due to Related Foreign Offices, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Billions of U.S. Dollars"
+start = "2004-06"
+end = "2026-09"
+observations = 268
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "NDFFRIM027SBOG"
+title = "Net Due to Related Foreign Offices, Foreign-Related Institutions"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Billions of U.S. Dollars"
+start = "1973-01"
+end = "2026-09"
+observations = 645
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "NDFLCBM027NBOG"
+title = "Net Due to Related Foreign Offices, Large Domestically Chartered Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Billions of U.S. Dollars"
+start = "2004-06"
+end = "2026-09"
+observations = 268
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "NONREVNS"
+title = "Nonrevolving Consumer Credit Owned and Securitized"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "PAYNSA"
+title = "All Employees, Total Nonfarm"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Persons"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "PBEDUCON"
+title = "Total Public Construction Spending: Educational in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2002-01"
+end = "2026-08"
+observations = 296
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "PBHWYCON"
+title = "Total Public Construction Spending: Highway and Street in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2002-01"
+end = "2026-08"
+observations = 296
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "PCE"
+title = "Personal Consumption Expenditures"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Billions of Dollars"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "PCEC96"
+title = "Real Personal Consumption Expenditures"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Billions of Chained 2017 Dollars"
+start = "2007-01"
+end = "2026-08"
+observations = 236
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "PCEPI"
+title = "Personal Consumption Expenditures: Chain-type Price Index"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Index 2017=100"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "PCU481111481111"
+title = "Producer Price Index by Industry: Scheduled Passenger Air Transportation"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Dec 1989=100"
+start = "1989-12"
+end = "2026-08"
+observations = 441
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "PCU4841214841212"
+title = "Producer Price Index by Industry: General Freight Trucking, Long-Distance Truckload: General Freight Trucking, Long-Distance, Truckload"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Jun 1992=100"
+start = "1992-06"
+end = "2026-08"
+observations = 411
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "PCU484484"
+title = "Producer Price Index by Industry: Truck Transportation"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Dec 2003=100"
+start = "2003-12"
+end = "2026-08"
+observations = 273
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "PCU721110721110"
+title = "Producer Price Index by Industry: Hotels and Motels, Except Casino Hotels"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Dec 2003=100"
+start = "2003-12"
+end = "2026-08"
+observations = 273
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "PERMIT"
+title = "New Privately-Owned Housing Units Authorized in Permit-Issuing Places: Total Units"
+source = "U.S. Census Bureau; U.S. Department of Housing and Urban Development"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Thousands of Units"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "PERMIT1NSA"
+title = "New Privately-Owned Housing Units Authorized in Permit-Issuing Places: Single-Family Units"
+source = "U.S. Census Bureau; U.S. Department of Housing and Urban Development"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "PERMIT5NSA"
+title = "New Privately-Owned Housing Units Authorized in Permit-Issuing Places: Units in Buildings with 5 Units or More"
+source = "U.S. Census Bureau; U.S. Department of Housing and Urban Development"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "PERMITNSA"
+title = "New Privately-Owned Housing Units Authorized in Permit-Issuing Places: Total Units"
+source = "U.S. Census Bureau; U.S. Department of Housing and Urban Development"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "PNRESCON"
+title = "Total Private Construction Spending: Nonresidential in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1993-01"
+end = "2026-08"
+observations = 404
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "PRRESCON"
+title = "Total Private Construction Spending: Residential in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1993-01"
+end = "2026-08"
+observations = 404
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "PSAVERT"
+title = "Personal Saving Rate"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Percent"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "RAILFRTCARLOADSD11"
+title = "Rail Freight Carloads"
+source = "U.S. Bureau of Transportation Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Carloads"
+start = "2000-01"
+end = "2026-07"
+observations = 319
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "RAILPMD11"
+title = "Rail Passenger Miles"
+source = "U.S. Bureau of Transportation Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Miles"
+start = "2000-01"
+end = "2026-06"
+observations = 318
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "REVOLNS"
+title = "Revolving Consumer Credit Owned and Securitized"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1968-01"
+end = "2026-08"
+observations = 704
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "RSAFS"
+title = "Advance Retail Sales: Retail Trade and Food Services"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "RSDSELDN"
+title = "Advance Retail Sales: Department Stores"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2025-03"
+observations = 399
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "RSMSRN"
+title = "Advance Retail Sales: Miscellaneous Store Retailers"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2017-09"
+end = "2026-08"
+observations = 108
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "RSMVPDN"
+title = "Advance Retail Sales: Motor Vehicle and Parts Dealers"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "RSNSRN"
+title = "Advance Retail Sales: Nonstore Retailers"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "RSSGHBMSN"
+title = "Advance Retail Sales: Sporting Goods, Hobby, Musical Instrument, and Book Stores"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "RSXFSN"
+title = "Advance Retail Sales: Retail Trade"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "TB4WK"
+title = "4-Week Treasury Bill Secondary Market Rate, Discount Basis"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2001-07"
+end = "2026-09"
+observations = 303
+values = "zeros"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "TB6MS"
+title = "6-Month Treasury Bill Secondary Market Rate, Discount Basis"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "TLAMUSCON"
+title = "Total Construction Spending: Amusement and Recreation in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2002-01"
+end = "2026-08"
+observations = 296
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "TLCOMCON"
+title = "Total Construction Spending: Commercial in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2002-01"
+end = "2026-08"
+observations = 296
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "TLEDUCON"
+title = "Total Construction Spending: Educational in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2002-01"
+end = "2026-08"
+observations = 296
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "TLHLTHCON"
+title = "Total Construction Spending: Health Care in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2020-09"
+end = "2026-08"
+observations = 72
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "TLPBLCON"
+title = "Total Public Construction Spending: Total Construction in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1993-01"
+end = "2026-08"
+observations = 404
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "TLPRVCON"
+title = "Total Private Construction Spending: Total Construction in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1993-01"
+end = "2026-08"
+observations = 404
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "TLWSCON"
+title = "Total Construction Spending: Water Supply in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2019-09"
+end = "2026-08"
+observations = 84
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "TOTALNS"
+title = "Total Consumer Credit Owned and Securitized"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "TOTALNSA"
+title = "Total Vehicle Sales"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "1976-01"
+end = "2026-09"
+observations = 609
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "TOTALSL"
+title = "Total Consumer Credit Owned and Securitized"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Millions of U.S. Dollars"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "TOTRESNS"
+title = "Reserves of Depository Institutions: Total"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Billions of Dollars"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "TRUCKD11"
+title = "Truck Tonnage Index"
+source = "U.S. Bureau of Transportation Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Index 2015=100"
+start = "2000-01"
+end = "2026-07"
+observations = 319
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "TTLCON"
+title = "Total Construction Spending: Total Construction in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1993-01"
+end = "2026-08"
+observations = 404
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "TTLCONS"
+title = "Total Construction Spending: Total Construction in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Millions of Dollars"
+start = "1993-01"
+end = "2026-08"
+observations = 404
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "U11SVS"
+title = "Manufacturers' Value of Shipments: Food Products"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "U22SVS"
+title = "Manufacturers' Value of Shipments: Paper Products"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "U33SVS"
+title = "Manufacturers' Value of Shipments: Machinery"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2018-09"
+end = "2026-08"
+observations = 96
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "UMDMNO"
+title = "Manufacturers' New Orders: Durable Goods"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-02"
+end = "2026-08"
+observations = 415
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "UMDMUO"
+title = "Manufacturers' Unfilled Orders: Durable Goods"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2017-09"
+end = "2026-08"
+observations = 108
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "UMDMVS"
+title = "Manufacturers' Value of Shipments: Durable Goods"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "UMTMNO"
+title = "Manufacturers' New Orders: Total Manufacturing"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-02"
+end = "2026-08"
+observations = 415
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "UMTMTI"
+title = "Manufacturers' Total Inventories: Total Manufacturing"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "UMTMUO"
+title = "Manufacturers' Unfilled Orders: Total Manufacturing"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "UMTMVS"
+title = "Manufacturers' Value of Shipments: Total Manufacturing"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "UNDCONTNSA"
+title = "New Privately-Owned Housing Units Under Construction: Total Units"
+source = "U.S. Census Bureau; U.S. Department of Housing and Urban Development"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "1969-12"
+end = "2026-08"
+observations = 681
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "UNRATE"
+title = "Unemployment Rate"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Percent"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "UNRATENSA"
+title = "Unemployment Rate"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "UNXANO"
+title = "Manufacturers' New Orders: Nondefense Capital Goods Excluding Aircraft"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-02"
+end = "2026-08"
+observations = 415
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "UNXAVS"
+title = "Manufacturers' Value of Shipments: Nondefense Capital Goods Excluding Aircraft"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "USCONS"
+title = "All Employees, Construction"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Thousands of Persons"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "USFIRE"
+title = "All Employees, Financial Activities"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Thousands of Persons"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "USTRADE"
+title = "All Employees, Retail Trade"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Thousands of Persons"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "W875RX1"
+title = "Real personal income excluding current transfer receipts"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Billions of Chained 2017 Dollars"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "WPU0561"
+title = "Producer Price Index by Commodity: Fuels and Related Products and Power: Crude Petroleum (Domestic Production)"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 1982=100"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "WPU10"
+title = "Producer Price Index by Commodity: Metals and Metal Products"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 1982=100"
+start = "2016-09"
+end = "2026-08"
+observations = 120
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "WPU11"
+title = "Producer Price Index by Commodity: Machinery and Equipment"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 1982=100"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "WPU12"
+title = "Producer Price Index by Commodity: Furniture and Household Durables"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 1982=100"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "WPU13"
+title = "Producer Price Index by Commodity: Nonmetallic Mineral Products"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 1982=100"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "WPU15"
+title = "Producer Price Index by Commodity: Miscellaneous Products"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index 1982=100"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "A014RE1Q156NBEA"
+title = "Shares of gross domestic product: Gross private domestic investment: Change in private inventories"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1947-01"
+end = "2026-04"
+observations = 318
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "A019RE1Q156NBEA"
+title = "Shares of gross domestic product: Net exports of goods and services"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1947-01"
+end = "2026-04"
+observations = 318
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "A822RE1Q156NBEA"
+title = "Shares of gross domestic product: Government consumption expenditures and gross investment"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2019-07"
+end = "2026-04"
+observations = 28
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "A939RX0Q048SBEA"
+title = "Real gross domestic product per capita"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Chained 2017 Dollars"
+start = "1947-01"
+end = "2026-04"
+observations = 318
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "ADM7111TAXABL144QNSA"
+title = "Total Admissions Revenue for 7111: Performing Arts Companies - Taxable, Establishments Subject to Federal Income Tax"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2009-01"
+end = "2026-04"
+observations = 70
+values = "positive"
+missing = ["2009-10", "2012-04", "2012-07", "2012-10", "2020-04", "2020-07", "2020-10", "2021-01"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "B021RE1Q156NBEA"
+title = "Shares of gross domestic product: Imports of goods and services"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1947-01"
+end = "2026-04"
+observations = 318
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "B230RC0Q173SBEA"
+title = "Population"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Thousands"
+start = "1947-01"
+end = "2026-04"
+observations = 318
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "BOGZ1FC152090005Q"
+title = "Households and Nonprofit Organizations; Net Worth, Change in Levels"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1946-10"
+end = "2026-04"
+observations = 319
+values = "negatives"
+missing = ["1947-01", "1947-04", "1947-07", "1948-01", "1948-04", "1948-07", "1949-01", "1949-04", "1949-07", "1950-01", "1950-04", "1950-07", "1951-01", "1951-04", "1951-07"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "BOGZ1FL133170005Q"
+title = "Farm Business (Included in Nonfinancial Corporate and Noncorporate Business Sectors); Trade Payables; Liability, Level"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1945-10"
+end = "2026-04"
+observations = 323
+values = "negatives"
+missing = ["1946-01", "1946-04", "1946-07", "1947-01", "1947-04", "1947-07", "1948-01", "1948-04", "1948-07", "1949-01", "1949-04", "1949-07", "1950-01", "1950-04", "1950-07", "1951-01", "1951-04", "1951-07"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "BOGZ1FR153064475Q"
+title = "Households and Nonprofit Organizations; Directly and Indirectly Held Corporate Equities; Asset, Revaluation"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1946-10"
+end = "2026-04"
+observations = 319
+values = "negatives"
+missing = ["1947-01", "1947-04", "1947-07", "1948-01", "1948-04", "1948-07", "1949-01", "1949-04", "1949-07", "1950-01", "1950-04", "1950-07", "1951-01", "1951-04", "1951-07"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "BOGZ1FU105000005Q"
+title = "Nonfinancial Corporate Business; Net Lending (+) or Borrowing (-) (Financial Account), Transactions"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1946-10"
+end = "2026-04"
+observations = 319
+values = "negatives"
+missing = ["1947-01", "1947-04", "1947-07", "1948-01", "1948-04", "1948-07", "1949-01", "1949-04", "1949-07", "1950-01", "1950-04", "1950-07", "1951-01", "1951-04", "1951-07"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CIU1010000000000I"
+title = "Employment Cost Index: Total compensation for All Civilian workers in All industries and occupations"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Index Dec 2005=100"
+start = "2001-01"
+end = "2026-04"
+observations = 102
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CIU1010000520000I"
+title = "Employment Cost Index: Total compensation for All Civilian workers in Transportation and material moving"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Index Dec 2005=100"
+start = "2005-10"
+end = "2026-04"
+observations = 83
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CIU2010000520000I"
+title = "Employment Cost Index: Total compensation for Private industry workers in Transportation and material moving"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Index Dec 2005=100"
+start = "2005-10"
+end = "2026-04"
+observations = 83
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CIU3010000000000I"
+title = "Employment Cost Index: Total compensation for State and local government workers in All industries and occupations"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Index Dec 2005=100"
+start = "2017-07"
+end = "2026-04"
+observations = 36
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CIU3020000000000I"
+title = "Employment Cost Index: Wages and salaries for State and local government workers in All industries and occupations"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Index Dec 2005=100"
+start = "2001-01"
+end = "2026-04"
+observations = 102
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CIU3030000000000I"
+title = "Employment Cost Index: Total benefits for State and local government workers in All industries and occupations"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Index Dec 2005=100"
+start = "2001-01"
+end = "2026-04"
+observations = 102
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "COMPNFB"
+title = "Nonfarm Business Sector: Hourly Compensation for All Workers"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Index 2017=100"
+start = "1947-01"
+end = "2026-04"
+observations = 318
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CORCREXFACBN"
+title = "Charge-Off Rate on Commercial Real Estate Loans (Excluding Farmland), Booked in Domestic Offices, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1991-01"
+end = "2026-04"
+observations = 142
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CORSFRMACBN"
+title = "Charge-Off Rate on Single Family Residential Mortgages, Booked in Domestic Offices, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1991-01"
+end = "2026-04"
+observations = 142
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "CPROFIT"
+title = "Corporate Profits with Inventory Valuation Adjustment (IVA) and Capital Consumption Adjustment (CCAdj)"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Billions of Dollars"
+start = "1947-01"
+end = "2026-04"
+observations = 318
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "DALLCCACBEP"
+title = "Asset Quality Measures, Delinquencies on All Loans and Leases, To Consumers, Credit Cards, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1991-01"
+end = "2026-04"
+observations = 142
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "DEMAUTO"
+title = "Net Percentage of Domestic Banks Reporting Stronger Demand for Auto Loans"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2011-04"
+end = "2026-07"
+observations = 62
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "DEMCC"
+title = "Net Percentage of Domestic Banks Reporting Stronger Demand for Credit Card Loans"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2011-04"
+end = "2026-07"
+observations = 62
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "DEMOTHCONS"
+title = "Net Percentage of Domestic Banks Reporting Stronger Demand for Consumer Loans Excluding Credit Card and Auto Loans"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2011-04"
+end = "2026-07"
+observations = 62
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "DRALACBN"
+title = "Delinquency Rate on All Loans, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2016-07"
+end = "2026-04"
+observations = 40
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "DRCCLACBN"
+title = "Delinquency Rate on Credit Card Loans, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1991-01"
+end = "2026-04"
+observations = 142
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "DRISCFLM"
+title = "Net Percentage of Domestic Banks Increasing Spreads of Loan Rates Over Banks' Cost of Funds to Large and Middle-Market Firms"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1990-04"
+end = "2026-07"
+observations = 146
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "DTCTLVENANQ"
+title = "Average Amount Financed for New Car Loans at Finance Companies (DISCONTINUED)"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Dollars"
+start = "2008-01"
+end = "2024-07"
+observations = 67
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "ECIALLCIV"
+title = "Employment Cost Index: Total compensation: All Civilian"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Index Dec 2005=100"
+start = "2001-01"
+end = "2026-04"
+observations = 102
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "ECOMNSA"
+title = "E-Commerce Retail Sales"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1999-10"
+end = "2026-04"
+observations = 107
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "ECOMPCTNSA"
+title = "E-Commerce Retail Sales as a Percent of Total Sales"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1999-10"
+end = "2026-04"
+observations = 107
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "EOCCUSQ176N"
+title = "Housing Inventory Estimate: Occupied Housing Units in the United States"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "2000-04"
+end = "2026-04"
+observations = 105
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "EOTH7111TAXABL144QNSA"
+title = "All Other Revenue for 7111: Performing Arts Companies - Taxable, Establishments Subject to Federal Income Tax"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2009-01"
+end = "2026-04"
+observations = 70
+values = "positive"
+missing = ["2009-10", "2010-10", "2011-10", "2012-04", "2012-07", "2014-01", "2014-07", "2016-04", "2016-07", "2016-10", "2017-01", "2017-04", "2018-04", "2018-07", "2020-07", "2021-04", "2021-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "EOWNOCCUSQ176N"
+title = "Housing Inventory Estimate: Owner Occupied Housing Units in the United States"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "2000-04"
+end = "2026-04"
+observations = 105
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "ERENTUSQ176N"
+title = "Housing Inventory Estimate: Vacant Housing Units for Rent in the United States"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "2000-04"
+end = "2026-04"
+observations = 105
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "FDHBATN"
+title = "Federal Debt Held by Agencies and Trusts"
+source = "U.S. Department of the Treasury. Fiscal Service"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1981-01"
+end = "2026-04"
+observations = 182
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "FDHBFIN"
+title = "Federal Debt Held by Foreign and International Investors"
+source = "U.S. Department of the Treasury. Fiscal Service"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Billions of Dollars"
+start = "1970-01"
+end = "2026-01"
+observations = 225
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "FYGFDPUN"
+title = "Federal Debt Held by the Public"
+source = "U.S. Department of the Treasury. Fiscal Service"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1970-01"
+end = "2026-04"
+observations = 226
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "GCE"
+title = "Government Consumption Expenditures and Gross Investment"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Billions of Dollars"
+start = "1947-01"
+end = "2026-04"
+observations = 318
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "GDP"
+title = "Gross Domestic Product"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Billions of Dollars"
+start = "1947-01"
+end = "2026-04"
+observations = 318
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "GDPC1"
+title = "Real Gross Domestic Product"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Billions of Chained 2017 Dollars"
+start = "1947-01"
+end = "2026-04"
+observations = 318
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "GFDEBTN"
+title = "Federal Debt: Total Public Debt"
+source = "U.S. Department of the Treasury. Fiscal Service"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1966-01"
+end = "2026-04"
+observations = 242
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "GOV5412TAXABL144QNSA"
+title = "Revenue from Governments for 5412: Accounting, Tax Preparation, Bookkeeping, and Payroll Services, Establishments Subject to Federal Income Tax"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2003-10"
+end = "2026-04"
+observations = 91
+values = "positive"
+missing = ["2005-01", "2005-04", "2006-01", "2007-07", "2007-10", "2008-01", "2008-04", "2008-07", "2008-10", "2009-01", "2009-04", "2009-07", "2009-10", "2010-01", "2010-04", "2010-07", "2010-10", "2011-01", "2011-04", "2011-07", "2011-10", "2012-01"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "GPDI"
+title = "Gross Private Domestic Investment"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Billions of Dollars"
+start = "1947-01"
+end = "2026-04"
+observations = 318
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "HOANBS"
+title = "Nonfarm Business Sector: Hours Worked for All Workers"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Index 2017=100"
+start = "1947-01"
+end = "2026-04"
+observations = 318
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IEAAN"
+title = "Net U.S. acquisition of financial assets excluding financial derivatives (net increase in assets / financial outflow (+))"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1999-01"
+end = "2026-04"
+observations = 110
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IEABCN"
+title = "Balance on current account"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1999-01"
+end = "2026-04"
+observations = 110
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IIPNETINQ"
+title = "U.S. Net International Investment Position Excluding Financial Derivatives"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2006-01"
+end = "2026-04"
+observations = 82
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "IIPUSNETIQ"
+title = "U.S. Net International Investment Position"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2006-01"
+end = "2026-04"
+observations = 82
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "LEU0252881500Q"
+title = "Employed full time: Median usual weekly nominal earnings (second quartile): Wage and salary workers: 16 years and over"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Dollars"
+start = "2018-07"
+end = "2026-04"
+observations = 32
+values = "positive"
+truncated = true
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "LEU0252881600Q"
+title = "Employed full time: Median usual weekly real earnings: Wage and salary workers: 16 years and over"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "1982-84 CPI Adjusted Dollars"
+start = "1979-01"
+end = "2026-04"
+observations = 190
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "LEU0252881800Q"
+title = "Employed full time: Median usual weekly nominal earnings (second quartile): Wage and salary workers: 16 years and over: Men"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Dollars"
+start = "1979-01"
+end = "2026-04"
+observations = 190
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "LEU0252882500Q"
+title = "Employed full time: Median usual weekly real earnings: Wage and salary workers: 25 years and over: Men"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "1982-84 CPI Adjusted Dollars"
+start = "2000-01"
+end = "2026-04"
+observations = 106
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "LEU0252884600Q"
+title = "Employed full time: Median usual weekly real earnings: Wage and salary workers: 16 years and over: Black or African American"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "1982-84 CPI Adjusted Dollars"
+start = "2000-01"
+end = "2026-04"
+observations = 106
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "LEU0252917300Q"
+title = "Employed full time: Median usual weekly nominal earnings (second quartile): Wage and salary workers: High School graduates, no college: 25 years and over"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Dollars"
+start = "2000-01"
+end = "2026-04"
+observations = 106
+values = "positive"
+missing = ["2025-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "M318501Q027NBEA"
+title = "Federal government budget surplus or deficit (-)"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Billions of Dollars"
+start = "1959-07"
+end = "2025-10"
+observations = 266
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "NA000348Q"
+title = "Personal Consumption Expenditures: Nondurable Goods"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2020-07"
+end = "2026-04"
+observations = 24
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "NA000349Q"
+title = "Personal Consumption Expenditures"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1947-01"
+end = "2026-04"
+observations = 318
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "NA000350Q"
+title = "Personal Consumption Expenditures: Services"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1947-01"
+end = "2026-04"
+observations = 318
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "NCOALLACB"
+title = "Asset Quality Measures, Net Charge-Offs on All Loans and Leases, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1985-01"
+end = "2026-04"
+observations = 166
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "ND000330Q"
+title = "Real Federal Consumption Expenditures and Gross Investment"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Billions of Chained 2017 Dollars"
+start = "2007-01"
+end = "2026-04"
+observations = 78
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "ND000331Q"
+title = "Real Government Consumption Expenditures and Gross Investment: Federal: National defense"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Billions of Chained 2017 Dollars"
+start = "2007-01"
+end = "2026-04"
+observations = 78
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "ND000332Q"
+title = "Real Government Consumption Expenditures and Gross Investment: Federal: Nondefense"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Billions of Chained 2017 Dollars"
+start = "2007-01"
+end = "2026-04"
+observations = 78
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "OPHNFB"
+title = "Nonfarm Business Sector: Labor Productivity (Output per Hour) for All Workers"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Index 2017=100"
+start = "1947-01"
+end = "2026-04"
+observations = 318
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "PRS85006092"
+title = "Nonfarm Business Sector: Labor Productivity (Output per Hour) for All Workers"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Percent Change at Annual Rate"
+start = "1947-04"
+end = "2026-04"
+observations = 317
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "QBPBSNUMINST"
+title = "Balance Sheet: Number of Institutions Reporting"
+source = "Federal Deposit Insurance Corporation"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Number of Institutions"
+start = "1984-01"
+end = "2026-04"
+observations = 170
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "QBPBSTASLNREALHOMEQ"
+title = "Balance Sheet: Total Assets: Loans Secured by Real Estate: Home Equity Lines"
+source = "Federal Deposit Insurance Corporation"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1987-10"
+end = "2026-04"
+observations = 155
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "QBPQYLNLOSS"
+title = "Income and Expense: Provision for Loan and Lease Losses"
+source = "Federal Deposit Insurance Corporation"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1984-01"
+end = "2026-04"
+observations = 170
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "QBPQYSECGAIN"
+title = "Income and Expense: Securities Gains (Losses)"
+source = "Federal Deposit Insurance Corporation"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1984-01"
+end = "2026-04"
+observations = 170
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "QBPQYTIEX"
+title = "Income and Expense: Total Interest Expense"
+source = "Federal Deposit Insurance Corporation"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "2017-07"
+end = "2026-04"
+observations = 36
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "QBPQYTNIY"
+title = "Income and Expense: Total Noninterest Income"
+source = "Federal Deposit Insurance Corporation"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1984-01"
+end = "2026-04"
+observations = 170
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "QFR101INFUSNO"
+title = "Quarterly Financial Report: U.S. Corporations: All Information: Net Sales, Receipts, and Operating Revenues"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2009-10"
+end = "2026-04"
+observations = 67
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "QFR101PTSUSNO"
+title = "Quarterly Financial Report: U.S. Corporations: All Professional and Technical Services, Except Legal Services: Net Sales, Receipts, and Operating Revenues"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2020-07"
+end = "2026-04"
+observations = 24
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "QFR111MFGUSNO"
+title = "Quarterly Financial Report: U.S. Corporations: All Manufacturing: Income (Loss) Before Income Taxes"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2000-10"
+end = "2026-04"
+observations = 103
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "QFR115MFGUSNO"
+title = "Quarterly Financial Report: U.S. Corporations: All Manufacturing: Income (Loss) After Income Taxes"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2000-10"
+end = "2026-04"
+observations = 103
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "QFR115RETUSNO"
+title = "Quarterly Financial Report: U.S. Corporations: All Retail Trade: Income (Loss) After Income Taxes"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2000-10"
+end = "2026-04"
+observations = 103
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "QFR322MFGUSNO"
+title = "Quarterly Financial Report: U.S. Corporations: All Manufacturing: Retained Earnings"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2000-10"
+end = "2026-04"
+observations = 103
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "QPRHLDTOTTOTHOLDINGSUSNO"
+title = "State and Local Government: Total Cash and Security Holdings"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1968-01"
+end = "2026-04"
+observations = 234
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "QTAXT01QTAXCAT1USNO"
+title = "National Totals of State and Local Tax Revenue: T01 Property Taxes for the United States"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1992-01"
+end = "2026-04"
+observations = 138
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "QTAXT094QEQTAXCAT2USNO"
+title = "National Totals of State Tax Revenue: T09 General Sales and Gross Receipts Taxes, 4 Quarters Ending for the United States"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1992-01"
+end = "2026-04"
+observations = 138
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "QTAXT104QEQTAXCAT2USNO"
+title = "National Totals of State Tax Revenue: T10 Alcoholic Beverages Sales Tax, 4 Quarters Ending for the United States"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1992-01"
+end = "2026-04"
+observations = 138
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "QTAXT414QEQTAXCAT1USNO"
+title = "National Totals of State and Local Tax Revenue: T41 Corporation Net Income Taxes, 4 Quarters Ending for the United States"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "2018-07"
+end = "2026-04"
+observations = 32
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "QTAXTOTALQTAXCAT1USNO"
+title = "National Totals of State and Local Tax Revenue: Total Taxes for the United States"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1992-01"
+end = "2026-04"
+observations = 138
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "REV524TAXABL157QNSA"
+title = "Total Revenue for 524: Insurance Carriers and Related Activities, Establishments Subject to Federal Income Tax"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent Change"
+start = "2009-10"
+end = "2026-04"
+observations = 67
+values = "negatives"
+missing = ["2010-10"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "REV5415TAXABL144QNSA"
+title = "Total Revenue for 5415: Computer Systems Design and Related Services, Establishments Subject to Federal Income Tax"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2019-07"
+end = "2026-04"
+observations = 28
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "REV6211TAXABL157QNSA"
+title = "Total Revenue for 6211: Offices of Physicians - Taxable, Establishments Subject to Federal Income Tax"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent Change"
+start = "2009-04"
+end = "2026-04"
+observations = 69
+values = "negatives"
+missing = ["2009-07"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "REV6221TAXABL157QNSA"
+title = "Total Revenue for 6221: General Medical and Surgical Hospitals - Taxable, Establishments Subject to Federal Income Tax"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent Change"
+start = "2012-10"
+end = "2026-04"
+observations = 55
+values = "negatives"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "REV623TAXEPT157QNSA"
+title = "Total Revenue for 623: Nursing and Residential Care Facilities - Tax-Exempt, Establishments Exempt from Federal Income Tax"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent Change"
+start = "2005-01"
+end = "2026-04"
+observations = 86
+values = "negatives"
+missing = ["2025-01"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "REV7139TAXABL144QNSA"
+title = "Total Revenue for 7139: Other Amusement and Recreation Industries - Taxable, Establishments Subject to Federal Income Tax"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2009-01"
+end = "2026-01"
+observations = 69
+values = "positive"
+missing = ["2018-04", "2018-07", "2018-10", "2019-01", "2019-04", "2019-07", "2021-07", "2023-04", "2024-07", "2024-10", "2025-07"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "RHORUSQ156N"
+title = "Homeownership Rate in the United States"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2016-07"
+end = "2026-04"
+observations = 40
+values = "positive"
+truncated = true
+downloaded = "2026-10-14"
+
+[[series]]
+id = "RHVRUSQ156N"
+title = "Homeowner Vacancy Rate in the United States"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1956-01"
+end = "2026-04"
+observations = 282
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "RIELPCFANNQ"
+title = "Average Finance Rate of New Car Loans at Finance Companies, Amount of Finance Weighted (DISCONTINUED)"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2008-01"
+end = "2024-07"
+observations = 67
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "RRVRUSQ156N"
+title = "Rental Vacancy Rate in the United States"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1956-01"
+end = "2026-04"
+observations = 282
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "RSAHORUSQ156S"
+title = "Homeownership Rate in the United States"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Percent"
+start = "1980-01"
+end = "2026-04"
+observations = 186
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "TDSP"
+title = "Household Debt Service Payments as a Percent of Disposable Personal Income"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Percent"
+start = "2005-01"
+end = "2026-04"
+observations = 86
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "TNWBSHNO"
+title = "Households and Nonprofit Organizations; Net Worth, Level"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1945-10"
+end = "2026-04"
+observations = 323
+values = "positive"
+missing = ["1946-01", "1946-04", "1946-07", "1947-01", "1947-04", "1947-07", "1948-01", "1948-04", "1948-07", "1949-01", "1949-04", "1949-07", "1950-01", "1950-04", "1950-07", "1951-01", "1951-04", "1951-07"]
+downloaded = "2026-10-14"
+
+[[series]]
+id = "ULCNFB"
+title = "Nonfarm Business Sector: Unit Labor Costs for All Workers"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Index 2017=100"
+start = "1947-01"
+end = "2026-04"
+observations = 318
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "VAPGDPFI"
+title = "Value Added by Industry: Finance, Insurance, Real Estate, Rental, and Leasing: Finance and Insurance as a Percentage of GDP"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2005-01"
+end = "2026-04"
+observations = 86
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "VAPGDPG"
+title = "Value Added by Industry: Government as a Percentage of GDP"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2005-01"
+end = "2026-04"
+observations = 86
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "WFRBLB50107"
+title = "Net Worth Held by the Bottom 50% (1st to 50th Wealth Percentiles)"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1989-07"
+end = "2026-04"
+observations = 148
+values = "positive"
+downloaded = "2026-10-14"
+
+[[series]]
+id = "WFRBLT01026"
+title = "Net Worth Held by the Top 1% (99th to 100th Wealth Percentiles)"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1989-07"
+end = "2026-04"
+observations = 148
+values = "positive"
+downloaded = "2026-10-14"
+
+# 100 series chosen for exact zeros, naturally short histories (not truncated)
+# and sources the series above lack.
+
+[[series]]
+id = "AIRRTMFM"
+title = "Air Revenue Ton Miles of Freight and Mail"
+source = "U.S. Bureau of Transportation Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Ton Miles"
+start = "2000-01"
+end = "2026-07"
+observations = 319
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "ALAUTA1LFN"
+title = "Civilian Labor Force in Autauga County, AL"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Persons"
+start = "1990-01"
+end = "2026-08"
+observations = 440
+values = "positive"
+missing = ["2025-10"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "ALNAN"
+title = "All Employees: Total Nonfarm in Alabama"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Persons"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "APU0000FN1101"
+title = "Average Price: All Soft Drinks (Cost per 2 Liters/67.6 Ounces) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "2018-04"
+end = "2026-09"
+observations = 102
+values = "positive"
+missing = ["2025-10"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "APU0000FS1101"
+title = "Average Price: Butter, Stick (Cost per Pound/453.6 Grams) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "2018-04"
+end = "2026-09"
+observations = 102
+values = "positive"
+missing = ["2025-10"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "AUST448BPPRIV"
+title = "New Private Housing Structures Authorized by Building Permits for Austin-Round Rock-Georgetown, TX (MSA)"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Units"
+start = "1988-01"
+end = "2026-08"
+observations = 464
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "AZBPPRIV"
+title = "New Private Housing Units Authorized by Building Permits for Arizona"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Units"
+start = "1988-01"
+end = "2026-08"
+observations = 464
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "BEND441LFN"
+title = "Civilian Labor Force in Bend-Redmond, OR (MSA)"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Persons"
+start = "1990-01"
+end = "2026-08"
+observations = 440
+values = "positive"
+missing = ["2025-10"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "BORROW"
+title = "Total Borrowings from the Federal Reserve"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "BUSLOANS"
+title = "Commercial and Industrial Loans, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Billions of U.S. Dollars"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "BUSLOANSNSA"
+title = "Commercial and Industrial Loans, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Billions of U.S. Dollars"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CABPPRIVSA"
+title = "New Private Housing Units Authorized by Building Permits for California"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Units"
+start = "1988-01"
+end = "2026-08"
+observations = 464
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CALF"
+title = "Civilian Labor Force in California"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Persons"
+start = "1976-01"
+end = "2026-08"
+observations = 608
+values = "positive"
+missing = ["2025-10"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CALFN"
+title = "Civilian Labor Force in California"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Persons"
+start = "1976-01"
+end = "2026-08"
+observations = 608
+values = "positive"
+missing = ["2025-10"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CARACBM027NBOG"
+title = "Consumer Loans: Other Consumer Loans: Automobile Loans, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Billions of U.S. Dollars"
+start = "2015-01"
+end = "2026-09"
+observations = 141
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CCLACBM027NBOG"
+title = "Consumer Loans: Credit Cards and Other Revolving Plans, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Billions of U.S. Dollars"
+start = "2000-07"
+end = "2026-09"
+observations = 315
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CHIC917URN"
+title = "Unemployment Rate in Chicago-Naperville-Elgin, IL-IN-WI (MSA)"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1990-01"
+end = "2026-08"
+observations = 440
+values = "positive"
+missing = ["2025-10"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CLDACBM027NBOG"
+title = "Real Estate Loans: Commercial Real Estate Loans: Construction and Land Development Loans, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Billions of U.S. Dollars"
+start = "2015-01"
+end = "2026-09"
+observations = 141
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "COINDUSZ3344"
+title = "Import Price Index by Origin (NAICS): Semiconductor and Other Electronic Component Manufacturing for Industrialized Countries"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Jun 2012=100"
+start = "2012-06"
+end = "2026-09"
+observations = 172
+values = "positive"
+missing = ["2025-10"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "COINDUSZ3391"
+title = "Import Price Index by Origin (NAICS): Medical Equipment and Supplies Manufacturing for Industrialized Countries"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Jun 2012=100"
+start = "2012-06"
+end = "2026-09"
+observations = 172
+values = "positive"
+missing = ["2025-10"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CURRCIR"
+title = "Currency in Circulation (DISCONTINUED)"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Billions of Dollars"
+start = "1960-11"
+end = "2025-10"
+observations = 780
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "DALL148LF"
+title = "Civilian Labor Force in Dallas-Fort Worth-Arlington, TX (MSA)"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Persons"
+start = "1990-01"
+end = "2026-08"
+observations = 440
+values = "positive"
+missing = ["2025-10"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "DTBNONM"
+title = "Other Business Receivables Securitized by Finance Companies, Level"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1990-12"
+end = "2026-07"
+observations = 428
+values = "zeros"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "DTBNOXDFBANM"
+title = "Other Business Receivables Securitized by Finance Companies, Flow"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars, Monthly Rate"
+start = "1991-01"
+end = "2026-07"
+observations = 427
+values = "negatives"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "DTBOONM"
+title = "Other Business Receivables Owned by Finance Companies, Level"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1980-06"
+end = "2026-07"
+observations = 554
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "DTBOOXDFBANM"
+title = "Other Business Receivables Owned by Finance Companies, Flow"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars, Monthly Rate"
+start = "1980-07"
+end = "2026-07"
+observations = 553
+values = "negatives"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "DTBSPCKANM"
+title = "Asset-Backed Commercial Paper Outstanding"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2001-01"
+end = "2026-09"
+observations = 309
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "DTBSPCKCT1NM"
+title = "Commercial Paper Outstanding, Tier-1"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2001-01"
+end = "2026-09"
+observations = 309
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "DTBSPCKM"
+title = "Commercial Paper Outstanding"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Millions of Dollars"
+start = "2001-01"
+end = "2026-09"
+observations = 309
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "DTCTLVENANM"
+title = "Average Amount Financed for New Car Loans at Finance Companies"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "2008-03"
+end = "2026-06"
+observations = 220
+values = "positive"
+missing = ["2008-04", "2008-05", "2008-07", "2008-08", "2008-10", "2008-11", "2009-01", "2009-02", "2009-04", "2009-05", "2009-07", "2009-08", "2009-10", "2009-11", "2010-01", "2010-02", "2010-04", "2010-05", "2010-07", "2010-08", "2010-10", "2010-11", "2011-01", "2011-02", "2011-04", "2011-05", "2011-07", "2011-08", "2011-10", "2011-11", "2012-01", "2012-02", "2012-04", "2012-05", "2012-07", "2012-08", "2012-10", "2012-11", "2013-01", "2013-02", "2013-04", "2013-05", "2013-07", "2013-08", "2013-10", "2013-11", "2014-01", "2014-02", "2014-04", "2014-05", "2014-07", "2014-08", "2014-10", "2014-11", "2015-01", "2015-02", "2015-04", "2015-05", "2015-07", "2015-08", "2015-10", "2015-11", "2016-01", "2016-02", "2016-04", "2016-05", "2016-07", "2016-08", "2016-10", "2016-11", "2017-01", "2017-02", "2017-04", "2017-05", "2017-07", "2017-08", "2017-10", "2017-11", "2018-01", "2018-02", "2018-04", "2018-05", "2018-07", "2018-08", "2018-10", "2018-11", "2019-01", "2019-02", "2019-04", "2019-05", "2019-07", "2019-08", "2019-10", "2019-11", "2020-01", "2020-02", "2020-04", "2020-05", "2020-07", "2020-08", "2020-10", "2020-11", "2021-01", "2021-02", "2021-04", "2021-05", "2021-07", "2021-08", "2021-10", "2021-11", "2022-01", "2022-02", "2022-04", "2022-05", "2022-07", "2022-08", "2022-10", "2022-11", "2023-01", "2023-02", "2023-04", "2023-05", "2023-07", "2023-08", "2023-10", "2023-11", "2024-01", "2024-02", "2024-04", "2024-05", "2024-07", "2024-08", "2024-10", "2024-11", "2025-01", "2025-02", "2025-04", "2025-05", "2025-07", "2025-08", "2025-10", "2025-11", "2026-01", "2026-02", "2026-04", "2026-05"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "DTTHFABAM"
+title = "Total Owned and Managed Receivables Outstanding Held by Finance Companies"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Percent Change at Annual Rate"
+start = "1970-07"
+end = "2026-07"
+observations = 673
+values = "negatives"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "EXCAUS"
+title = "Canadian Dollars to U.S. Dollar Spot Exchange Rate"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Canadian Dollars to One U.S. Dollar"
+start = "1971-01"
+end = "2026-09"
+observations = 669
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "EXHKUS"
+title = "Hong Kong Dollars to U.S. Dollar Spot Exchange Rate"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Hong Kong Dollars to One U.S. Dollar"
+start = "1981-01"
+end = "2026-09"
+observations = 549
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "EXP2390"
+title = "U.S. Exports of Goods by F.A.S. Basis to Cuba"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "zeros"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "EXP2774"
+title = "U.S. Exports of Goods by F.A.S. Basis to Sint Maarten"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2011-01"
+end = "2026-08"
+observations = 188
+values = "zeros"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "EXP2777"
+title = "U.S. Exports of Goods by F.A.S. Basis to Curacao"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2011-01"
+end = "2026-08"
+observations = 188
+values = "zeros"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "EXP5020"
+title = "U.S. Exports of Goods by F.A.S. Basis to Syria"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "zeros"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "EXP5050"
+title = "U.S. Exports of Goods by F.A.S. Basis to Iraq"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "zeros"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "EXP5070"
+title = "U.S. Exports of Goods by F.A.S. Basis to Iran"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1985-01"
+end = "2026-08"
+observations = 500
+values = "zeros"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "EXPMANUS"
+title = "Exports of Goods: Manufactured Commodities for United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1995-08"
+end = "2026-08"
+observations = 373
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "FRDGBSAM"
+title = "Federal Reserve Bank Held Gold Bullion: On Display"
+source = "U.S. Department of the Treasury. Fiscal Service"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Fine Troy Ounces"
+start = "2012-01"
+end = "2026-09"
+observations = 177
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "HPIPONM226S"
+title = "Purchase Only House Price Index for the United States"
+source = "U.S. Federal Housing Finance Agency"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Index Jan 1991=100"
+start = "1991-01"
+end = "2026-07"
+observations = 427
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "HQMCB10YR"
+title = "10-Year High Quality Market (HQM) Corporate Bond Spot Rate"
+source = "U.S. Department of the Treasury"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1984-01"
+end = "2026-09"
+observations = 513
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "IMP5020"
+title = "U.S. Imports of Goods by Customs Basis from Syria"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "IQ212"
+title = "Export Price Index (End Use): Agricultural Machinery and Equipment"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Dec 2016=100"
+start = "2016-12"
+end = "2025-12"
+observations = 109
+values = "positive"
+missing = ["2025-10"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "LBSNSA01"
+title = "Labor Force Participation Rate for Alabama"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1976-01"
+end = "2026-08"
+observations = 608
+values = "positive"
+missing = ["2025-10"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "LBSNSA13"
+title = "Labor Force Participation Rate for Georgia"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1976-01"
+end = "2026-08"
+observations = 608
+values = "positive"
+missing = ["2025-10"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "LNFACBM027NBOG"
+title = "Other Loans and Leases: All Other Loans and Leases: Loans to Nondepository Financial Institutions, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Billions of U.S. Dollars"
+start = "2015-01"
+end = "2026-09"
+observations = 141
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "LNS17200000"
+title = "Labor Force Flows Not in Labor Force to Employed"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Thousands of Persons"
+start = "1990-02"
+end = "2026-09"
+observations = 440
+values = "positive"
+missing = ["2025-10", "2025-11"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "M12MTVUSM227NFWA"
+title = "Moving 12-Month Total Vehicle Miles Traveled"
+source = "U.S. Federal Highway Administration"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Miles"
+start = "1970-12"
+end = "2026-08"
+observations = 669
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MNGLCP"
+title = "U.S. Natural Gas Liquid Composite Price"
+source = "U.S. Energy Information Administration"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Dollars per Million BTU"
+start = "2009-01"
+end = "2026-07"
+observations = 211
+values = "positive"
+missing = ["2009-03", "2009-07", "2010-08", "2011-06", "2012-06"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MSRSCATOTAL"
+title = "Monthly State Retail Sales: Total Retail Sales Excluding Nonstore Retailers in California"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent Change from Year Ago"
+start = "2019-01"
+end = "2026-05"
+observations = 89
+values = "negatives"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MSRSFL441"
+title = "Monthly State Retail Sales: Motor Vehicle and Parts Dealers in Florida"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent Change from Year Ago"
+start = "2019-01"
+end = "2026-05"
+observations = 89
+values = "negatives"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MSRSTXTOTAL"
+title = "Monthly State Retail Sales: Total Retail Sales Excluding Nonstore Retailers in Texas"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent Change from Year Ago"
+start = "2019-01"
+end = "2026-05"
+observations = 89
+values = "negatives"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MSRSUSA445"
+title = "Monthly State Retail Sales: Food and Beverage Stores in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent Change from Year Ago"
+start = "2019-01"
+end = "2026-05"
+observations = 89
+values = "negatives"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MSRSUSA446"
+title = "Monthly State Retail Sales: Health and Personal Care Stores in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent Change from Year Ago"
+start = "2019-01"
+end = "2026-05"
+observations = 89
+values = "negatives"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MSRSUSA447"
+title = "Monthly State Retail Sales: Gasoline Stations in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent Change from Year Ago"
+start = "2019-01"
+end = "2026-05"
+observations = 89
+values = "negatives"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MSRSUSA448"
+title = "Monthly State Retail Sales: Clothing and Clothing Accessories Stores in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent Change from Year Ago"
+start = "2019-01"
+end = "2026-05"
+observations = 89
+values = "negatives"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MSRSUSATOTAL"
+title = "Monthly State Retail Sales: Total Retail Sales Excluding Nonstore Retailers in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent Change from Year Ago"
+start = "2019-01"
+end = "2026-05"
+observations = 89
+values = "negatives"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "PCEDG"
+title = "Personal Consumption Expenditures: Durable Goods"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Billions of Dollars"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "PCU236224236224"
+title = "Producer Price Index by Industry: New Health Care Building Construction"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Jun 2012=100"
+start = "2012-06"
+end = "2026-09"
+observations = 172
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "PCU488119488119602"
+title = "Producer Price Index by Industry: Other Airport Operations: Lease Space for Rental Cars"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Jun 2014=100"
+start = "2014-06"
+end = "2026-09"
+observations = 148
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "PCU5615105615102112"
+title = "Producer Price Index by Industry: Travel Agencies: Car Rental Bookings"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Dec 2011=100"
+start = "2011-12"
+end = "2026-09"
+observations = 178
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "POPTHM"
+title = "Population"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "RETAILIMNSA"
+title = "Retailers Inventories"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "RETAILIRNSA"
+title = "Retailers: Inventories to Sales Ratio"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Ratio"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "RIELPCFANNM"
+title = "Average Finance Rate of New Car Loans at Finance Companies, Amount of Finance Weighted"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2008-03"
+end = "2026-06"
+observations = 220
+values = "positive"
+missing = ["2008-04", "2008-05", "2008-07", "2008-08", "2008-10", "2008-11", "2009-01", "2009-02", "2009-04", "2009-05", "2009-07", "2009-08", "2009-10", "2009-11", "2010-01", "2010-02", "2010-04", "2010-05", "2010-07", "2010-08", "2010-10", "2010-11", "2011-01", "2011-02", "2011-04", "2011-05", "2011-07", "2011-08", "2011-10", "2011-11", "2012-01", "2012-02", "2012-04", "2012-05", "2012-07", "2012-08", "2012-10", "2012-11", "2013-01", "2013-02", "2013-04", "2013-05", "2013-07", "2013-08", "2013-10", "2013-11", "2014-01", "2014-02", "2014-04", "2014-05", "2014-07", "2014-08", "2014-10", "2014-11", "2015-01", "2015-02", "2015-04", "2015-05", "2015-07", "2015-08", "2015-10", "2015-11", "2016-01", "2016-02", "2016-04", "2016-05", "2016-07", "2016-08", "2016-10", "2016-11", "2017-01", "2017-02", "2017-04", "2017-05", "2017-07", "2017-08", "2017-10", "2017-11", "2018-01", "2018-02", "2018-04", "2018-05", "2018-07", "2018-08", "2018-10", "2018-11", "2019-01", "2019-02", "2019-04", "2019-05", "2019-07", "2019-08", "2019-10", "2019-11", "2020-01", "2020-02", "2020-04", "2020-05", "2020-07", "2020-08", "2020-10", "2020-11", "2021-01", "2021-02", "2021-04", "2021-05", "2021-07", "2021-08", "2021-10", "2021-11", "2022-01", "2022-02", "2022-04", "2022-05", "2022-07", "2022-08", "2022-10", "2022-11", "2023-01", "2023-02", "2023-04", "2023-05", "2023-07", "2023-08", "2023-10", "2023-11", "2024-01", "2024-02", "2024-04", "2024-05", "2024-07", "2024-08", "2024-10", "2024-11", "2025-01", "2025-02", "2025-04", "2025-05", "2025-07", "2025-08", "2025-10", "2025-11", "2026-01", "2026-02", "2026-04", "2026-05"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "RTWEXAFEGS"
+title = "Real Advanced Foreign Economies Dollar Index"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Jan 2006=100"
+start = "2006-01"
+end = "2026-09"
+observations = 249
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "SHSNSAUS"
+title = "Total Shipments of New Manufactured Homes: Single Homes in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands"
+start = "2014-01"
+end = "2026-05"
+observations = 149
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "SHTNSAUS"
+title = "Total Shipments of New Manufactured Homes: Total Homes in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "SHTSAUS"
+title = "Total Shipments of New Manufactured Homes: Total Homes in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Thousands"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "SPSNSAUS"
+title = "Average Sales Price of New Manufactured Homes: Single Homes in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "2014-01"
+end = "2026-05"
+observations = 149
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "TOTBUSSMSA"
+title = "Total Business Sales"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "WPU011306"
+title = "Producer Price Index by Commodity: Farm Products: Potatoes"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Dec 2011=100"
+start = "2011-12"
+end = "2026-09"
+observations = 178
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "ATNHPIUS28140Q"
+title = "All-Transactions House Price Index for Kansas City, MO-KS (MSA)"
+source = "U.S. Federal Housing Finance Agency"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Index 1995:Q1=100"
+start = "1976-01"
+end = "2026-04"
+observations = 202
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "ATNHPIUS41884Q"
+title = "All-Transactions House Price Index for San Francisco-San Mateo-Redwood City, CA (MSAD)"
+source = "U.S. Federal Housing Finance Agency"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Index 1995:Q1=100"
+start = "1975-07"
+end = "2026-04"
+observations = 204
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "BOGZ1FL263069563Q"
+title = "Rest of the World; U.S. Nonfinancial Business Loans Held by CLOs; Asset, Level"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "2018-04"
+end = "2026-04"
+observations = 33
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "BOGZ1FL713068663Q"
+title = "Central Bank; Loans to Brokers and Dealers Through the Primary Dealer Credit Facility (PDCF); Asset, Level"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1945-10"
+end = "2026-04"
+observations = 323
+values = "zeros"
+missing = ["1946-01", "1946-04", "1946-07", "1947-01", "1947-04", "1947-07", "1948-01", "1948-04", "1948-07", "1949-01", "1949-04", "1949-07", "1950-01", "1950-04", "1950-07", "1951-01", "1951-04", "1951-07"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "BOGZ1FL713068905Q"
+title = "Central Bank; Depository Institution Loans N.e.c. to Other Financial Business COVID-19 Funding, Credit, and Liquidity Facilities; Asset, Level"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1945-10"
+end = "2026-04"
+observations = 323
+values = "zeros"
+missing = ["1946-01", "1946-04", "1946-07", "1947-01", "1947-04", "1947-07", "1948-01", "1948-04", "1948-07", "1949-01", "1949-04", "1949-07", "1950-01", "1950-04", "1950-07", "1951-01", "1951-04", "1951-07"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "BOGZ1FL763065065Q"
+title = "U.S.-Chartered Depository Institutions; Total Mortgages Held in FDIC Receivership; Asset, Level"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1945-10"
+end = "2026-04"
+observations = 323
+values = "zeros"
+missing = ["1946-01", "1946-04", "1946-07", "1947-01", "1947-04", "1947-07", "1948-01", "1948-04", "1948-07", "1949-01", "1949-04", "1949-07", "1950-01", "1950-04", "1950-07", "1951-01", "1951-04", "1951-07"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "BOGZ1FL763065563Q"
+title = "U.S.-Chartered Depository Institutions; Commercial Mortgages Held in FDIC Receivership; Asset, Level"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1945-10"
+end = "2026-04"
+observations = 323
+values = "zeros"
+missing = ["1946-01", "1946-04", "1946-07", "1947-01", "1947-04", "1947-07", "1948-01", "1948-04", "1948-07", "1949-01", "1949-04", "1949-07", "1950-01", "1950-04", "1950-07", "1951-01", "1951-04", "1951-07"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "BOGZ1FU313063763Q"
+title = "Federal Government; Corporate Bonds Issued by Commercial Banking Under TARP; Asset, Transactions"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1946-10"
+end = "2026-04"
+observations = 319
+values = "negatives"
+missing = ["1947-01", "1947-04", "1947-07", "1948-01", "1948-04", "1948-07", "1949-01", "1949-04", "1949-07", "1950-01", "1950-04", "1950-07", "1951-01", "1951-04", "1951-07"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "BOGZ1FU763065065Q"
+title = "U.S.-Chartered Depository Institutions; Total Mortgages Held in FDIC Receivership; Asset, Transactions"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1946-10"
+end = "2026-04"
+observations = 319
+values = "negatives"
+missing = ["1947-01", "1947-04", "1947-07", "1948-01", "1948-04", "1948-07", "1949-01", "1949-04", "1949-07", "1950-01", "1950-04", "1950-07", "1951-01", "1951-04", "1951-07"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "BOGZ1LM263163063Q"
+title = "Rest of the World; Bonds: Collateralized Loan Obligations; Liability, Market Value Levels"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "2014-10"
+end = "2026-04"
+observations = 47
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "BUS5414TAXABL144QNSA"
+title = "Revenue from Businesses for 5414: Specialized Design Services, Establishments Subject to Federal Income Tax"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2012-07"
+end = "2026-01"
+observations = 55
+values = "positive"
+missing = ["2017-04", "2017-07", "2018-04", "2018-07", "2018-10", "2019-10", "2020-07", "2020-10"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CANQGSP"
+title = "Gross Domestic Product: All Industry Total in California"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Millions of Dollars"
+start = "2005-01"
+end = "2026-04"
+observations = 86
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CTQ05TCNR"
+title = "5) Over the Past Three Months, How Has Your Use of Nonprice Terms (for Example, Haircuts, Maximum Maturity, Covenants, Cure Periods, Cross-Default Provisions, or Other Documentation Features) with Respect to Hedge Funds Across the Entire Spectrum of Securities Financing and OTC Derivatives Transaction Types Changed, Regardless of Price Terms?| Answer Type: Tightened Considerably"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Number of Respondents"
+start = "2011-07"
+end = "2026-07"
+observations = 61
+values = "zeros"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "EXHE3C5Q73NP"
+title = "Net Percentage of Respondents Reporting an Improvement in Liquidity and Functioning in the Underlying Markets for: CMBS"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Number of Respondents"
+start = "2011-10"
+end = "2026-07"
+observations = 60
+values = "negatives"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "GDPPOT"
+title = "Real Potential Gross Domestic Product"
+source = "U.S. Congressional Budget Office"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Billions of Chained 2017 Dollars"
+start = "1949-01"
+end = "2036-10"
+observations = 352
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MALDBAMLFA"
+title = "Central Bank; Loans to Depository Institutions, Including AMLF, MMLF, and PPPLF; Asset, Level"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1945-10"
+end = "2026-04"
+observations = 323
+values = "positive"
+missing = ["1946-01", "1946-04", "1946-07", "1947-01", "1947-04", "1947-07", "1948-01", "1948-04", "1948-07", "1949-01", "1949-04", "1949-07", "1950-01", "1950-04", "1950-07", "1951-01", "1951-04", "1951-07"]
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "NROU"
+title = "Noncyclical Rate of Unemployment"
+source = "U.S. Congressional Budget Office"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1949-01"
+end = "2036-10"
+observations = 352
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "PRS85006013"
+title = "Nonfarm Business Sector: Employment for All Workers"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Index 2017=100"
+start = "1947-01"
+end = "2026-04"
+observations = 318
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "QBPBSTASLNINDVOLNINDCARLN"
+title = "Balance Sheet: Total Assets: Loans to Individuals: Other Loans to Individuals: Auto Loans"
+source = "Federal Deposit Insurance Corporation"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "2011-01"
+end = "2026-04"
+observations = 62
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "QPRHLDFTSFEDHOLDINGSUSNO"
+title = "State and Local Government: Federal Government Securities: Federal Treasury Securities"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2019-01"
+end = "2026-04"
+observations = 30
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "QPRHLDTPEPEQHOLDINGSUSNO"
+title = "State and Local Government: Total Private Equity"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2019-01"
+end = "2026-04"
+observations = 30
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "REV000000ATAXABL157QNSA"
+title = "Total Revenue for Selected Services Total, All Establishments"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent Change"
+start = "2013-04"
+end = "2026-04"
+observations = 53
+values = "negatives"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "REV721TAXABL157QNSA"
+title = "Total Revenue for 721: Accommodation, Establishments Subject to Federal Income Tax"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent Change"
+start = "2012-10"
+end = "2026-04"
+observations = 55
+values = "negatives"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "SFQ56A4TCNR"
+title = "56) Over the Past Three Months, How Have the Terms Under Which High-Yield Corporate Bonds Are Funded Changed?| A. Terms for Average Clients | 4. Collateral Spreads Over Relevant Benchmark (Effective Financing Rates). | Answer Type: Tightened Considerably"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Number of Respondents"
+start = "2011-10"
+end = "2026-07"
+observations = 60
+values = "zeros"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "VAPGDPAFH"
+title = "Value Added by Industry: Agriculture, Forestry, Fishing, and Hunting as a Percentage of GDP"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2005-01"
+end = "2026-04"
+observations = 86
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+[[series]]
+id = "VAPGDPC"
+title = "Value Added by Industry: Construction as a Percentage of GDP"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2005-01"
+end = "2026-04"
+observations = 86
+values = "positive"
+batch = 2
+downloaded = "2026-10-16"
+
+# 96 series: ones on which this crate first disagreed with Build 62, plus
+# stationary, short, zero-valued and seasonally adjusted series from releases
+# the series above lack.
+
+[[series]]
+id = "ALURN"
+title = "Unemployment Rate in Alabama"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1976-01"
+end = "2026-08"
+observations = 608
+values = "positive"
+missing = ["2025-10"]
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "APU0000FJ1101"
+title = "Average Price: Milk, Fresh, Low-Fat, Reduced Fat, Skim (Cost per Gallon/3.8 Liters) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "2018-04"
+end = "2026-09"
+observations = 102
+values = "positive"
+missing = ["2025-10"]
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "APU0000FJ4101"
+title = "Average Price: Yogurt (Cost per 8 Ounces/226.8 Grams) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "2018-04"
+end = "2026-09"
+observations = 102
+values = "positive"
+missing = ["2025-10"]
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "APU0000FN1102"
+title = "Average Price: All Soft Drinks, 12 Pk, 12 Ounce, Cans (Cost per 12 Ounces/354.9 Milliliters) in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "2018-04"
+end = "2026-09"
+observations = 102
+values = "positive"
+missing = ["2025-10"]
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "B1030NCBCMG"
+title = "Other Loans and Leases: All Other Loans and Leases: Loans to Nondepository Financial Institutions, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Percent Change at Annual Rate"
+start = "2015-02"
+end = "2026-09"
+observations = 140
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "B1243NCBCMG"
+title = "Consumer Loans: Other Consumer Loans: Automobile Loans, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Percent Change at Annual Rate"
+start = "2015-02"
+end = "2026-09"
+observations = 140
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CARACBM027SBOG"
+title = "Consumer Loans: Other Consumer Loans: Automobile Loans, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Billions of U.S. Dollars"
+start = "2015-01"
+end = "2026-09"
+observations = 141
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CLDACBM027SBOG"
+title = "Real Estate Loans: Commercial Real Estate Loans: Construction and Land Development Loans, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Billions of U.S. Dollars"
+start = "2015-01"
+end = "2026-09"
+observations = 141
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "COCHNZ333"
+title = "Import Price Index by Origin (NAICS): Machinery Manufacturing for China"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Jun 2012=100"
+start = "2012-06"
+end = "2026-09"
+observations = 172
+values = "positive"
+missing = ["2025-10"]
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "COOASZ3344"
+title = "Import Price Index by Origin (NAICS): Semiconductor and Other Electronic Component Manufacturing for Asian Newly Industrialized Countries"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Jun 2012=100"
+start = "2012-06"
+end = "2026-09"
+observations = 172
+values = "positive"
+missing = ["2025-10"]
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CUSR0000SERAC"
+title = "Consumer Price Index for All Urban Consumers: Video and Audio Products in U.S. City Average"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Index Dec 2009=100"
+start = "2010-01"
+end = "2026-09"
+observations = 201
+values = "positive"
+missing = ["2025-10"]
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "DGDSRAM1M225NBEA"
+title = "Real Personal Consumption Expenditures: Goods"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Percent Change from Preceding Period"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "EXP6144"
+title = "U.S. Exports of Goods by F.A.S. Basis to Niue"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "zeros"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "EXP6226"
+title = "U.S. Exports of Goods by F.A.S. Basis to Kiribati"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "zeros"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "EXP7321"
+title = "U.S. Exports of Goods by F.A.S. Basis to Sudan"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2011-01"
+end = "2026-08"
+observations = 188
+values = "zeros"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "EXP7323"
+title = "U.S. Exports of Goods by F.A.S. Basis to South Sudan"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2011-01"
+end = "2026-08"
+observations = 188
+values = "zeros"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "EXP7580"
+title = "U.S. Exports of Goods by F.A.S. Basis to St Helena"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "zeros"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "GAURN"
+title = "Unemployment Rate in Georgia"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1976-01"
+end = "2026-08"
+observations = 608
+values = "positive"
+missing = ["2025-10"]
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "GS2"
+title = "Market Yield on U.S. Treasury Securities at 2-Year Constant Maturity, Quoted on an Investment Basis"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1976-06"
+end = "2026-09"
+observations = 604
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "GS20"
+title = "Market Yield on U.S. Treasury Securities at 20-Year Constant Maturity, Quoted on an Investment Basis"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+missing = ["1987-01", "1987-02", "1987-03", "1987-04", "1987-05", "1987-06", "1987-07", "1987-08", "1987-09", "1987-10", "1987-11", "1987-12", "1988-01", "1988-02", "1988-03", "1988-04", "1988-05", "1988-06", "1988-07", "1988-08", "1988-09", "1988-10", "1988-11", "1988-12", "1989-01", "1989-02", "1989-03", "1989-04", "1989-05", "1989-06", "1989-07", "1989-08", "1989-09", "1989-10", "1989-11", "1989-12", "1990-01", "1990-02", "1990-03", "1990-04", "1990-05", "1990-06", "1990-07", "1990-08", "1990-09", "1990-10", "1990-11", "1990-12", "1991-01", "1991-02", "1991-03", "1991-04", "1991-05", "1991-06", "1991-07", "1991-08", "1991-09", "1991-10", "1991-11", "1991-12", "1992-01", "1992-02", "1992-03", "1992-04", "1992-05", "1992-06", "1992-07", "1992-08", "1992-09", "1992-10", "1992-11", "1992-12", "1993-01", "1993-02", "1993-03", "1993-04", "1993-05", "1993-06", "1993-07", "1993-08", "1993-09"]
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "GS3"
+title = "Market Yield on U.S. Treasury Securities at 3-Year Constant Maturity, Quoted on an Investment Basis"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "IMP4751"
+title = "U.S. Imports of Goods by Customs Basis from San Marino"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "zeros"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "IMP6142"
+title = "U.S. Imports of Goods by Customs Basis from Cook Islands"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "zeros"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "IMP6143"
+title = "U.S. Imports of Goods by Customs Basis from Tokelau"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "zeros"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "IMP6144"
+title = "U.S. Imports of Goods by Customs Basis from Niue"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "zeros"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "IMP6830"
+title = "U.S. Imports of Goods by Customs Basis from Palau"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "zeros"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "IMP6864"
+title = "U.S. Imports of Goods by Customs Basis from Tonga"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "IMP7323"
+title = "U.S. Imports of Goods by Customs Basis from South Sudan"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2011-01"
+end = "2026-08"
+observations = 188
+values = "zeros"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "IMP7700"
+title = "U.S. Imports of Goods by Customs Basis from Somalia"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "zeros"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "IMP7741"
+title = "U.S. Imports of Goods by Customs Basis from Eritrea"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1993-01"
+end = "2026-08"
+observations = 404
+values = "zeros"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "IMP7890"
+title = "U.S. Imports of Goods by Customs Basis from Comoros"
+source = "U.S. Bureau of Economic Analysis; U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1992-01"
+end = "2026-08"
+observations = 416
+values = "zeros"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "JTU1000HIR"
+title = "Hires: Total Private"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Rate"
+start = "2000-12"
+end = "2026-08"
+observations = 309
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "JTU2300JOR"
+title = "Job Openings: Construction"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Rate"
+start = "2000-12"
+end = "2026-08"
+observations = 309
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "JTUHIR"
+title = "Hires: Total Nonfarm"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Rate"
+start = "2000-12"
+end = "2026-08"
+observations = 309
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "LNS11300001"
+title = "Labor Force Participation Rate - Men"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Percent"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+missing = ["2025-10"]
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "LNU01300001"
+title = "Labor Force Participation Rate - Men"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+missing = ["2025-10"]
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "LNU01300002"
+title = "Labor Force Participation Rate - Women"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+missing = ["2025-10"]
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "LNU01300060"
+title = "Labor Force Participation Rate - 25-54 Yrs."
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+missing = ["2025-10"]
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MARTSMPCSM44000USN"
+title = "Advance Retail Sales: Retail Trade"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent Change from Preceding Period"
+start = "1992-02"
+end = "2026-09"
+observations = 416
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MARTSMPCSM44000USS"
+title = "Advance Retail Sales: Retail Trade"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Percent Change from Preceding Period"
+start = "1992-02"
+end = "2026-09"
+observations = 416
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MDLM"
+title = "Other Liquid Deposits: Total"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Billions of Dollars"
+start = "2020-05"
+end = "2026-08"
+observations = 76
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MDLNM"
+title = "Other Liquid Deposits: Total"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Billions of Dollars"
+start = "2020-05"
+end = "2026-08"
+observations = 76
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MPCTNRXXS"
+title = "Total Construction Spending: Nonresidential in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Percent Change from Preceding Period"
+start = "2002-02"
+end = "2026-08"
+observations = 295
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MRTSMPCSM44000USN"
+title = "Retail Sales: Retail Trade"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent Change from Preceding Period"
+start = "1992-02"
+end = "2026-08"
+observations = 415
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MRTSMPCSM7225USN"
+title = "Retail Sales: Restaurants and Other Eating Places"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent Change from Preceding Period"
+start = "1992-02"
+end = "2026-08"
+observations = 415
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MSRSAZ445"
+title = "Monthly State Retail Sales: Food and Beverage Stores in Arizona"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent Change from Year Ago"
+start = "2019-01"
+end = "2026-05"
+observations = 89
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MSRSFLTOTAL"
+title = "Monthly State Retail Sales: Total Retail Sales Excluding Nonstore Retailers in Florida"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent Change from Year Ago"
+start = "2019-01"
+end = "2026-05"
+observations = 89
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MSRSNYTOTAL"
+title = "Monthly State Retail Sales: Total Retail Sales Excluding Nonstore Retailers in New York"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent Change from Year Ago"
+start = "2019-01"
+end = "2026-05"
+observations = 89
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MSRSUSA442"
+title = "Monthly State Retail Sales: Furniture and Home Furnishings Stores in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent Change from Year Ago"
+start = "2019-01"
+end = "2026-05"
+observations = 89
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MSRSUSA444"
+title = "Monthly State Retail Sales: Building Material and Garden Equipment and Supplies Dealers in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Percent Change from Year Ago"
+start = "2019-01"
+end = "2026-05"
+observations = 89
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MTSMFBOM133FMS"
+title = "Means of Financing: by Other Means"
+source = "U.S. Department of the Treasury. Fiscal Service"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2010-01"
+end = "2026-09"
+observations = 201
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MTSMFBP133FMS"
+title = "Means of Financing: Borrowing from the Public"
+source = "U.S. Department of the Treasury. Fiscal Service"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2010-01"
+end = "2026-09"
+observations = 201
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "MTSMFROC133FMS"
+title = "Means of Financing: Reduction of Operating Cash, Increase (-)"
+source = "U.S. Department of the Treasury. Fiscal Service"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2010-01"
+end = "2026-09"
+observations = 201
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "NHSUSSP100O"
+title = "New Houses Sold by Sales Price in the United States, $1,000,000 and over"
+source = "U.S. Census Bureau; U.S. Department of Housing and Urban Development"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "2020-01"
+end = "2026-08"
+observations = 80
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "NHSUSSP30T39"
+title = "New Houses Sold by Sales Price in the United States, Between $300,000 and $399,999"
+source = "U.S. Census Bureau; U.S. Department of Housing and Urban Development"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "2020-01"
+end = "2026-08"
+observations = 80
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "NHSUSSPT"
+title = "New Houses Sold by Sales Price in the United States, Total"
+source = "U.S. Census Bureau; U.S. Department of Housing and Urban Development"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Thousands of Units"
+start = "2020-01"
+end = "2026-08"
+observations = 80
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "PCU3113531135"
+title = "Producer Price Index by Industry: Chocolate and Confectionery Manufacturing"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Dec 2011=100"
+start = "2011-12"
+end = "2026-09"
+observations = 178
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "PCU325130325130"
+title = "Producer Price Index by Industry: Synthetic Dye and Pigment Manufacturing"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Dec 2011=100"
+start = "2011-12"
+end = "2026-09"
+observations = 178
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "PCU325311325311A"
+title = "Producer Price Index by Industry: Nitrogenous Fertilizer Manufacturing: Synthetic Ammonia, Nitric Acid, Ammonium Compounds, and Urea"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "Index Dec 2014=100"
+start = "2014-12"
+end = "2026-09"
+observations = 142
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "PI"
+title = "Personal Income"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Billions of Dollars"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "SPDNSAUS"
+title = "Average Sales Price of New Manufactured Homes: Double Homes in the United States"
+source = "U.S. Census Bureau"
+frequency = "monthly"
+seasonal_adjustment = "NSA"
+units = "U.S. Dollars"
+start = "2014-01"
+end = "2026-05"
+observations = 149
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "TOTALSLAR"
+title = "Percent Change of Total Consumer Credit"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Percent Change at Annual Rate"
+start = "1961-09"
+end = "2026-08"
+observations = 780
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "TSIFRGHTC"
+title = "Freight Transportation Services Index"
+source = "U.S. Bureau of Transportation Statistics"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Percent Change from Preceding Period"
+start = "2000-02"
+end = "2026-07"
+observations = 318
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "A006RL1Q225SBEA"
+title = "Real Gross Private Domestic Investment"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Percent Change from Preceding Period"
+start = "1947-04"
+end = "2026-04"
+observations = 317
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "A014RY2Q224SBEA"
+title = "Contributions to percent change in real gross domestic product: Gross private domestic investment: Change in private inventories"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Percentage Points at Annual Rate"
+start = "1947-04"
+end = "2026-04"
+observations = 317
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "A019RY2Q224SBEA"
+title = "Contributions to percent change in real gross domestic product: Net exports of goods and services"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Percentage Points at Annual Rate"
+start = "1947-04"
+end = "2026-04"
+observations = 317
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "A021RY2Q224SBEA"
+title = "Contributions to percent change in real gross domestic product: Imports of goods and services"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Percentage Points at Annual Rate"
+start = "1947-04"
+end = "2026-04"
+observations = 317
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "A823RY2Q224SBEA"
+title = "Contributions to percent change in real gross domestic product: Government consumption expenditures and gross investment: Federal"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Percentage Points at Annual Rate"
+start = "1947-04"
+end = "2026-04"
+observations = 317
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "BOGZ1FU265000005Q"
+title = "Rest of the World; Net Lending (+) or Borrowing (-) (Financial Account), Transactions"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1946-10"
+end = "2026-04"
+observations = 319
+values = "negatives"
+missing = ["1947-01", "1947-04", "1947-07", "1948-01", "1948-04", "1948-07", "1949-01", "1949-04", "1949-07", "1950-01", "1950-04", "1950-07", "1951-01", "1951-04", "1951-07"]
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "BOGZ1FU315000005Q"
+title = "Federal Government; Net Lending (+) or Borrowing (-) (Financial Account), Transactions"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of U.S. Dollars"
+start = "1946-10"
+end = "2026-04"
+observations = 319
+values = "negatives"
+missing = ["1947-01", "1947-04", "1947-07", "1948-01", "1948-04", "1948-07", "1949-01", "1949-04", "1949-07", "1950-01", "1950-04", "1950-07", "1951-01", "1951-04", "1951-07"]
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CAPUTLB50001SQ"
+title = "Capacity Utilization: Total Index"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Percent"
+start = "1967-01"
+end = "2026-07"
+observations = 239
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CORALT100N"
+title = "Charge-Off Rate on All Loans, Banks Ranked 1st to 100th Largest in Size by Assets"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1985-01"
+end = "2026-04"
+observations = 166
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CORCCACBS"
+title = "Charge-Off Rate on Credit Card Loans, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Percent"
+start = "1985-01"
+end = "2026-04"
+observations = 166
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CORCCT100N"
+title = "Charge-Off Rate on Credit Card Loans, Banks Ranked 1st to 100th Largest in Size by Assets"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1985-01"
+end = "2026-04"
+observations = 166
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CORLAGACBN"
+title = "Charge-Off Rate on Loans to Finance Agricultural Production, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1985-01"
+end = "2026-04"
+observations = 166
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CPGDPF"
+title = "Contributions to Percent Change in Real GDP by Industry: Government: Federal"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Percentage Points"
+start = "2005-04"
+end = "2026-04"
+observations = 85
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "CPGDPM"
+title = "Contributions to Percent Change in Real GDP by Industry: Mining"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Percentage Points"
+start = "2005-04"
+end = "2026-04"
+observations = 85
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "DDURRY2Q224SBEA"
+title = "Contributions to percent change in real gross domestic product: Personal consumption expenditures: Durable goods"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Percentage Points at Annual Rate"
+start = "1947-04"
+end = "2026-04"
+observations = 317
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "DRFAPGACBN"
+title = "Delinquency Rate on Loans to Finance Agricultural Production, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1987-01"
+end = "2026-04"
+observations = 158
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "DRISCFS"
+title = "Net Percentage of Domestic Banks Increasing Spreads of Loan Rates Over Banks' Cost of Funds to Small Firms"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1990-04"
+end = "2026-07"
+observations = 146
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "ECICOM"
+title = "Employment Cost Index: Compensation: Private Industry Workers"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Index Dec 2005=100"
+start = "2001-01"
+end = "2026-04"
+observations = 102
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "HHD5414TAXABL144QNSA"
+title = "Revenue from Households for 5414: Specialized Design Services, Establishments Subject to Federal Income Tax"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2012-07"
+end = "2026-01"
+observations = 55
+values = "positive"
+missing = ["2013-04", "2013-07", "2013-10", "2014-01", "2014-04", "2014-10", "2015-01", "2016-04", "2016-07", "2016-10", "2018-01", "2021-07", "2023-10"]
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "IEABCP"
+title = "Balance on capital account"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Millions of Dollars"
+start = "1999-01"
+end = "2026-04"
+observations = 110
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "IEABCPN"
+title = "Balance on capital account"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "1999-01"
+end = "2026-04"
+observations = 110
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "PRS85006091"
+title = "Nonfarm Business Sector: Labor Productivity (Output per Hour) for All Workers"
+source = "U.S. Bureau of Labor Statistics"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Percent Change from Quarter One Year Ago"
+start = "1948-01"
+end = "2026-04"
+observations = 314
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "QBPLNTLN3089DUR"
+title = "Loan Performance: Total Loans and Leases: 30-89 Day Past Due Rate"
+source = "Federal Deposit Insurance Corporation"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1984-01"
+end = "2026-04"
+observations = 170
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "QBPLNTLNNTCGOFFR"
+title = "Loan Performance: Total Loans and Leases: Net Charge-Off Rate"
+source = "Federal Deposit Insurance Corporation"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1984-01"
+end = "2026-04"
+observations = 170
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "QFR322INFUSNO"
+title = "Quarterly Financial Report: U.S. Corporations: All Information: Retained Earnings"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Millions of Dollars"
+start = "2009-10"
+end = "2026-04"
+observations = 67
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "REV519TAXABL157QNSA"
+title = "Total Revenue for 519: Other Information Services, Establishments Subject to Federal Income Tax"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent Change"
+start = "2012-10"
+end = "2026-04"
+observations = 55
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "REV5414TAXABL157QNSA"
+title = "Total Revenue for 5414: Specialized Design Services, Establishments Subject to Federal Income Tax"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent Change"
+start = "2012-10"
+end = "2026-04"
+observations = 55
+values = "negatives"
+missing = ["2017-07", "2017-10", "2018-04", "2018-07", "2018-10"]
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "REV7211TAXABL157QNSA"
+title = "Total Revenue for 7211: Traveler Accommodation, Establishments Subject to Federal Income Tax"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent Change"
+start = "2012-10"
+end = "2026-04"
+observations = 55
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "REV7212TAXABL157QNSA"
+title = "Total Revenue for 7212: Rv (Recreational Vehicle) Parks and Recreational Camps, Establishments Subject to Federal Income Tax"
+source = "U.S. Census Bureau"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent Change"
+start = "2012-10"
+end = "2026-04"
+observations = 55
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "SUBLPDHMDGNQ"
+title = "Net Percentage of Domestic Banks Reporting Stronger Demand for Government Mortgage Loans"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2015-01"
+end = "2026-07"
+observations = 47
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "SUBLPDMODXWBNQ"
+title = "Net Percentage of Domestic Banks Reporting Stronger Demand Across Loan Categories, Weighted by Banks' Outstanding Loan Balances by Category"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "1991-10"
+end = "2026-07"
+observations = 140
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "SUBLPDRCDC"
+title = "Net Percentage of Domestic Banks Reporting Stronger Demand for Commercial Real Estate Loans With Construction and Land Development Purposes"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "quarterly"
+seasonal_adjustment = "NSA"
+units = "Percent"
+start = "2013-10"
+end = "2026-07"
+observations = 52
+values = "negatives"
+batch = 3
+downloaded = "2026-10-16"
+
+[[series]]
+id = "TXRQGSP"
+title = "Real Gross Domestic Product: All Industry Total in Texas"
+source = "U.S. Bureau of Economic Analysis"
+frequency = "quarterly"
+seasonal_adjustment = "SA"
+units = "Millions of Chained 2017 Dollars"
+start = "2005-01"
+end = "2026-04"
+observations = 86
+values = "positive"
+batch = 3
+downloaded = "2026-10-16"
+
+# REALLN and CONSUMER. Rows U-07a and U-07b on them overflow Build 62's `-s`
+# summary buffer in prtd8b, so the harness reruns Build 62 without `-s`.
+
+[[series]]
+id = "CONSUMER"
+title = "Consumer Loans, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Billions of U.S. Dollars"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+batch = 4
+downloaded = "2026-10-16"
+
+[[series]]
+id = "REALLN"
+title = "Real Estate Loans, All Commercial Banks"
+source = "Board of Governors of the Federal Reserve System (US)"
+frequency = "monthly"
+seasonal_adjustment = "SA"
+units = "Billions of U.S. Dollars"
+start = "1961-10"
+end = "2026-09"
+observations = 780
+values = "positive"
+batch = 4
+downloaded = "2026-10-16"

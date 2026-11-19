@@ -1,0 +1,113 @@
+# Synthetic sub-corpus: descriptors, never data. The harness generates each
+# series (oracle/src/parity/synthetic.rs); rows select one only by listing its
+# id in `series`. Seeds were searched so each series reproduces the case its
+# U row exercises.
+
+[[series]]
+id = "SYN_U14A"
+kind = "arima"
+seed = 5
+length = 480
+level = 1000
+ar = [{ 1 = 0.6 }, { 1 = 0.75 }, { 1 = 0.9 }, { 12 = -0.5 }]
+diff = [1, 12]
+
+[[series]]
+id = "SYN_U14B"
+kind = "arima"
+seed = 4
+length = 480
+level = 1000
+ar = [{ 1 = 1.36, 2 = 0.64 }, { 1 = 0.73 }, { 12 = -0.5 }]
+diff = [1, 12]
+
+[[series]]
+id = "SYN_U15A"
+kind = "arima"
+seed = 1
+length = 120
+ar = [{ 1 = 0.95 }]
+
+[[series]]
+id = "SYN_U15B"
+kind = "arima"
+seed = 1
+length = 240
+ar = [{ 1 = -0.95, 2 = 0.9025 }]
+
+[[series]]
+id = "SYN_U16A"
+kind = "arima"
+seed = 1
+length = 240
+level = 1000
+ar = [{ 1 = -0.7 }, { 12 = 0.99 }]
+diff = [1, 12]
+
+[[series]]
+id = "SYN_U16B"
+kind = "arima"
+seed = 2
+length = 240
+level = 1000
+ar = [{ 1 = -0.7 }, { 12 = 0.99 }]
+diff = [1, 12]
+
+[[series]]
+id = "SYN_U17A"
+kind = "arima"
+seed = 4
+length = 240
+level = 1000
+ar = [{ 1 = -0.5 }, { 12 = 0.3 }]
+ma = [{ 1 = 0.6, 2 = 0.6 }, { 12 = 0.36 }]
+diff = [1]
+
+[[series]]
+id = "SYN_U17B"
+kind = "arima"
+seed = 13
+length = 240
+level = 1000
+ar = [{ 1 = -0.5 }, { 12 = 0.3 }]
+ma = [{ 1 = 0.6, 2 = 0.6 }, { 12 = 0.36 }]
+diff = [1]
+
+[[series]]
+id = "SYN_U18"
+kind = "arima"
+seed = 1
+length = 240
+level = 1000
+ar = [{ 3 = 0.99 }]
+ma = [{ 12 = -0.6 }]
+diff = [1, 12]
+
+[[series]]
+id = "SYN_U19"
+kind = "constant"
+length = 120
+value = 100.0
+
+[[series]]
+id = "SYN_U20"
+kind = "relabel"
+source = "IPG2211N"
+start = [1901, 1]
+last = 120
+
+[[series]]
+id = "SYN_U21"
+kind = "arima"
+frequency = "quarterly"
+seed = 135
+length = 40
+level = 100
+
+[[series]]
+id = "SYN_U21B"
+kind = "arima"
+frequency = "quarterly"
+seed = 3364
+length = 40
+level = 100

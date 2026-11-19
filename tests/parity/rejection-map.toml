@@ -1,0 +1,147 @@
+# The rejection map. When Build 62 and this crate both reject a case, the case
+# fails unless Build 62's message has an entry here that allows the crate's
+# `ErrorKind`.
+# Each entry maps a Build 62 rejection to the Rust `ErrorKind`s that are a
+# sensible rejection of it. `prefix` is matched against the start of the first
+# line of Build 62's message as the harness records it; prefixes must not
+# overlap. Kinds come from what the Build 62 message means, per the
+# `ErrorKind` docs. `Unsupported` and `Internal` are never a rejection. Routines name the
+# compiled sources (makefile.gf); spectrum2.f is not compiled.
+
+[[rejections]]
+prefix = "DECOMPOSITION INVALID,IRREGULAR SPECTRUM NEGATIVE"
+allowed = ["Numerical"]
+routine = "SPECTRUM (spectrum.f format 7052)"
+note = "No admissible decomposition of the fitted model."
+
+[[rejections]]
+prefix = "ERROR: Must specify a regARIMA model when the Missing Value procedure is used."
+allowed = ["UnsuitableData"]
+routine = "editor"
+note = "Gaps without a model to estimate them."
+
+[[rejections]]
+prefix = "ERROR: Adding "
+allowed = ["UnsuitableData"]
+routine = "adrgef (format 1010)"
+note = "Missing-value or outlier regressors exceed Build 62's PB capacity."
+
+[[rejections]]
+prefix = "ERROR: Initial seasonal factor is equal to zero"
+allowed = ["Numerical"]
+routine = "x11pt2 (format 1020)"
+note = "Pseudo-additive X-11 divides by a zero initial seasonal factor."
+
+[[rejections]]
+prefix = "ERROR: Missing value code found outside of model span"
+allowed = ["UnsuitableData"]
+routine = "editor"
+note = "Gaps the model span cannot estimate."
+
+[[rejections]]
+prefix = "ERROR: Regression matrix singular because of "
+allowed = ["Numerical"]
+routine = "prterr (formats 1060, 1070)"
+note = "Singular regression design for a named regressor."
+
+[[rejections]]
+prefix = "ERROR: Multiplicative or log additive seasonal adjustment cannot be"
+allowed = ["UnsuitableData", "InvalidSpec"]
+routine = "arima"
+note = "Preadjustment of untransformed data: a spec conflict, which in the corpus only gap series reach, through their MV regressors."
+
+[[rejections]]
+prefix = "ERROR: Cannot compute outlier t-statistic for outlier backward deletion"
+allowed = ["Numerical"]
+routine = "deltst (format 1010)"
+note = "Zero residual RMSE in backward deletion."
+
+[[rejections]]
+prefix = "ERROR: regARIMA model estimation in outlier identification procedure did"
+allowed = ["Numerical"]
+routine = "idotlr (format 1200)"
+note = "A wrapper line; the next line names the cause (in the corpus, a singular regression)."
+
+[[rejections]]
+prefix = "ERROR: Cannot perform automatic outlier identification if the robust"
+allowed = ["Numerical"]
+routine = "idotlr (format 1011)"
+note = "Zero robust residual MSE."
+
+[[rejections]]
+prefix = "ERROR: Estimation failed to converge -- maximum "
+allowed = ["Numerical"]
+routine = "itrerr (formats 1020-1040)"
+note = "Iteration or function-evaluation limit reached."
+
+[[rejections]]
+prefix = "ERROR: Number of years spanned by the forecast augmented series"
+allowed = ["UnsuitableData"]
+routine = "editor"
+note = "Forecast-augmented span exceeds PYRS."
+
+[[rejections]]
+prefix = "ERROR: Nonseasonal MA polynomial with initial parameters is noninvertible"
+allowed = ["Numerical"]
+routine = "setmdl (formats 1010, 1020, 1050)"
+note = "Starting MA values not invertible; corpus rows set no initial values."
+
+[[rejections]]
+prefix = "ERROR: Seasonal MA polynomial with initial parameters is noninvertible"
+allowed = ["Numerical"]
+routine = "setmdl (formats 1010, 1020, 1050)"
+note = "As the nonseasonal entry."
+
+[[rejections]]
+prefix = "ERROR: Estimation failed to converge for automatically identified model"
+allowed = ["Numerical"]
+routine = "amdid (format 1080)"
+note = "Final automatic model does not converge."
+
+[[rejections]]
+prefix = "ERROR: All data values for at least one "
+allowed = ["UnsuitableData"]
+routine = "editor"
+note = "A calendar month, quarter or period is entirely missing."
+
+[[rejections]]
+prefix = "The innovation variance of the "
+allowed = ["Numerical"]
+routine = "ShowComp (spectrum.f format 9000)"
+note = "Component innovation variance above one or below zero."
+
+[[rejections]]
+prefix = "transitoryThe innovation variance of the "
+allowed = ["Numerical"]
+routine = "ShowComp (spectrum.f format 9000)"
+note = "As above; the transitory call shifts the format's arguments."
+
+[[rejections]]
+prefix = "ERROR: Cannot make a choice of "
+allowed = ["Numerical"]
+routine = "amdid (format 1000)"
+note = "Estimation errors in automatic ARMA-order selection."
+
+[[rejections]]
+prefix = "SEATS cannot perform a signal extraction."
+allowed = ["Numerical"]
+routine = "ANALTS (5015/5016; the harness's text)"
+note = "Degenerate fitted model: no SEATS table saved."
+
+[[rejections]]
+prefix = "AUTO: Cannot generate autocorrelations from a series of zeros."
+allowed = ["UnsuitableData"]
+routine = "AUTO (ansub1.f)"
+note = "Differenced series is all zero: a constant input."
+
+[[rejections]]
+prefix = "SEARCH : Model degenerate"
+allowed = ["Numerical"]
+routine = "SEARCH (ansub1.f)"
+note = "Degenerate fitted model in SEATS's parameter search; no corpus pair yet."
+
+[[rejections]]
+prefix = "CALCFX : "
+allowed = ["Numerical"]
+routine = "CALCFX (ansub1.f)"
+note = "SEATS objective with a zero or negative determinant; no corpus pair yet."

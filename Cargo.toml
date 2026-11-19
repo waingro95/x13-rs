@@ -1,0 +1,59 @@
+[package]
+name = "x13"
+version = "0.1.0"
+edition = "2024"
+# The lowest stable toolchain where `cargo check -p x13 --lib --locked` passes;
+# 1.87 rejects the let chains.
+rust-version = "1.88"
+license = "MIT OR Apache-2.0"
+description = "Pure-Rust X-13ARIMA-SEATS seasonal adjustment (X-11 and SEATS with regARIMA), checked against Census Build 62"
+readme = "README.md"
+documentation = "https://docs.rs/x13"
+repository = "https://github.com/waingro95/x13-rs"
+keywords = ["seasonal-adjustment", "x13", "arima", "time-series", "econometrics"]
+categories = ["mathematics", "science", "algorithms"]
+include = ["/src/**", "/README.md", "/CHANGELOG.md", "/LICENSE-*", "/NOTICE", "/Cargo.toml"]
+
+[profile.parity]
+inherits = "release"
+debug-assertions = true
+overflow-checks = true
+
+[profile.bench]
+debug = "line-tables-only"
+
+[[bench]]
+name = "corpus"
+harness = false
+
+[[bench]]
+name = "adjust"
+harness = false
+
+[features]
+# Not public API. Exposes two X-11 intermediate vectors to this repository's
+# development tests. May change or disappear in any release.
+__conditioning-scales = []
+
+[dependencies]
+thiserror.workspace = true
+
+[dev-dependencies]
+toml.workspace = true
+serde_json = { workspace = true, features = ["float_roundtrip"] }
+criterion = { version = "0.8.2", default-features = false, features = ["cargo_bench_support"] }
+
+[workspace]
+members = ["oracle"]
+default-members = ["."]
+resolver = "3"
+
+[workspace.dependencies]
+csv = "1.4.0"
+globset = "0.4.20"
+rayon = "1.12.0"
+toml = "1.1.8"
+sha2 = "0.11.0"
+serde_json = "1.0.151"
+thiserror = "2.0.20"
+tempfile = "3.27.0"

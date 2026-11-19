@@ -1,0 +1,97 @@
+# The tolerances the parity harness applies when it compares Rust with
+# Build 62 (`oracle/src/parity/compare.rs`). Changing a value is a maintainer
+# decision: see CONTRIBUTING.md.
+
+# SEATS components (seasonal, seasonally adjusted, trend-cycle, irregular and
+# transitory): relative error against the Build 62 value. A Build 62 zero must
+# be matched exactly.
+[seats]
+relative = 6e-15
+
+# X-11 components, by decomposition mode. A value passes when its error is at
+# most `absolute`, or at most `relative` times
+# max(|Build 62 value|, `scale_floor`), or, where a conditioning scale applies,
+# at most `conditioned_epsilon_multiplier` times f64::EPSILON times that scale.
+
+# Log-additive and pseudo-additive X-11 have no conditioning scale.
+[unconditioned.seasonal]
+absolute = 1e-13
+relative = 1e-13
+scale_floor = 1.0
+
+[unconditioned.seasonally_adjusted]
+absolute = 1e-13
+relative = 1e-13
+scale_floor = 1.0
+
+[unconditioned.trend_cycle]
+absolute = 1e-13
+relative = 1e-13
+scale_floor = 1.0
+
+[unconditioned.irregular]
+absolute = 1e-13
+relative = 1e-13
+scale_floor = 1.0
+
+# Additive X-11. The conditioning scale at each date is the largest of 1, the
+# input and the four Build 62 components, in absolute value.
+[additive.seasonal]
+absolute = 1e-13
+relative = 1e-13
+scale_floor = 1.0
+conditioned_epsilon_multiplier = 16.0
+
+[additive.seasonally_adjusted]
+absolute = 1e-13
+relative = 1e-13
+scale_floor = 1.0
+conditioned_epsilon_multiplier = 16.0
+
+[additive.trend_cycle]
+absolute = 1e-13
+relative = 1e-13
+scale_floor = 1.0
+conditioned_epsilon_multiplier = 16.0
+
+[additive.irregular]
+absolute = 1e-13
+relative = 1e-13
+scale_floor = 1.0
+conditioned_epsilon_multiplier = 16.0
+
+# Multiplicative X-11. Only the trend-cycle and the irregular have a
+# conditioning scale: the scale of the Henderson filter operation that produced
+# each value (`Adjustment::conditioning_scales`).
+[multiplicative.seasonal]
+absolute = 1e-13
+relative = 1e-13
+scale_floor = 1.0
+
+[multiplicative.seasonally_adjusted]
+absolute = 1e-13
+relative = 1e-13
+scale_floor = 1.0
+
+[multiplicative.trend_cycle]
+absolute = 1e-13
+relative = 1e-13
+scale_floor = 1.0
+conditioned_epsilon_multiplier = 8.0
+
+[multiplicative.irregular]
+absolute = 1e-13
+relative = 1e-13
+scale_floor = 1.0
+conditioned_epsilon_multiplier = 8.0
+
+# Scalars Build 62 saves as decimal text: relative error against the Build 62
+# value. A Build 62 zero must be matched exactly.
+[saved]
+# 15 significant digits: forecasts, backcasts, regression coefficients, and
+# the ARMA coefficients where `strict_arma_gate`
+# (`oracle/src/parity/output.rs`) says Build 62 saved that many.
+fifteen_digits = 6e-15
+# 14 significant digits: the remaining ARMA coefficients and the SEATS model's
+# coefficients.
+fourteen_digits = 6e-14

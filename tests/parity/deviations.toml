@@ -1,0 +1,275 @@
+# Cases where this crate differs from Build 62 on purpose. Each entry needs a
+# reason, and the list changes only with a maintainer's agreement
+# (CONTRIBUTING.md).
+# [[outside_corpus]] lists cases no corpus case reaches; the harness never
+# matches them.
+# Optional expected_matches is the number of cases a wildcard entry must match;
+# a full run fails on any other count.
+
+[[deviations]]
+pattern = "{EXP7580,IMP4751,IMP6142}/{04,62}"
+output = "outcome"
+fortran = "success"
+rust = "rejected: Numerical(NumericalFailure(X11PseudoAdditive *stage: SeasonalIrregular, index: 6, period: 1992-07, reason: ZeroDivisor*"
+reason = "Six cases: unchanged Build 62 with floating-point trapping stops at X11PT2:430/DIVSUB, dividing zero observations by a zero initial centered trend. The reference executable continues and reports zero adjusted values for 202, 253 and 241 nonzero observations in EXP7580, IMP4751 and IMP6142 respectively, in both rows. There is no defined ratio, and Build 62 has no recovery from it. Rust returns the dated zero-divisor error rather than corrupted components."
+
+[[deviations]]
+pattern = "{EXP6144,IMP6144}/{04,62}"
+output = "Fortran execution/parser"
+fortran = "failed: X-13 exceeded its 600s deadline"
+rust = "rejected: Numerical(NumericalFailure(X11PseudoAdditive *stage: SeasonalIrregular, index: 6, period: 1992-07, reason: ZeroDivisor*"
+reason = "Four cases: the reference executable times out after initial centered-trend 0/0. An isolated floating-point-trapping build of unchanged Build 62 confirms X11PT2:430/DIVSUB in every case, the same invalid continuation as DTBNONM. Rust returns the dated zero-divisor error."
+
+[[deviations]]
+pattern = "IMP7741/{04,62}"
+output = "Fortran execution/parser"
+fortran = "failed: X-13 exceeded its 600s deadline"
+rust = "rejected: Numerical(NumericalFailure(X11PseudoAdditive *stage: SeasonalIrregular, index: 6, period: 1993-07, reason: ZeroDivisor*"
+reason = "Both cases time out after initial centered-trend 0/0. An isolated floating-point-trapping build of unchanged Build 62 confirms X11PT2:430/DIVSUB, the same invalid continuation as DTBNONM. Rust returns the dated zero-divisor error."
+
+[[deviations]]
+pattern = "IMP7700/{04,62}"
+output = "Fortran execution/parser"
+fortran = "failed: X-13 exceeded its 600s deadline"
+rust = "rejected: Numerical(NumericalFailure(X11PseudoAdditive *stage: SeasonalIrregular, index: 29, period: 1994-06, reason: ZeroDivisor*"
+reason = "Both cases time out after initial centered-trend 0/0. An isolated floating-point-trapping build of unchanged Build 62 confirms X11PT2:430/DIVSUB, the same invalid continuation as DTBNONM. Rust returns the dated zero-divisor error."
+
+[[deviations]]
+pattern = "IMP5520/{04,62}"
+output = "Fortran execution/parser"
+fortran = "failed: X-13 exceeded its 600s deadline"
+rust = "rejected: Numerical(NumericalFailure(X11PseudoAdditive *stage: SeasonalIrregular, index: 6, period: 1992-07, reason: ZeroDivisor*"
+reason = "The initial centered trend is zero over IMP5520's leading zero observations. x11pt2 calls divsub with 0/0 at July 1992, after which the reference executable hangs. An isolated floating-point-trapping build confirms that first invalid division for both direct and regARIMA-assisted calls. Rust returns the dated zero-divisor error rather than entering the undefined continuation."
+
+[[deviations]]
+pattern = "{NA000348Q,QFR101PTSUSNO}/89"
+output = "outcome"
+fortran = "success"
+rust = 'rejected: Numerical(NumericalFailure(Seats \{ stage: Mean, failure: AutocorrelationSample \{ count: 16 \} \}))'
+reason = "These 24-observation quarterly BP=1/Q=1 inputs leave Na=16 extended residuals, while ANALTS retains IQ=16 from the Nw=19 differenced sample. ANSUB1 AUTO:1865 computes r(16)^2/(Na-16)=0/0, where an invalid-trapping build stops. The NaN Qstat feeds ANALTS retry selection; Build 62 signals IEEE_INVALID_FLAG and continues without a valid fit diagnostic. Rust returns a contextual invalid-diagnostic-sample error before that division. U-12i (IQ=15) traps at the same division."
+
+[[deviations]]
+pattern = "{NA000348Q,QFR101PTSUSNO}/U-12i"
+output = "outcome"
+fortran = "success"
+rust = 'rejected: Numerical(NumericalFailure(Seats \{ stage: Mean, failure: AutocorrelationSample \{ count: 15 \} \}))'
+reason = "As row 89 on (1,0,0)(1,1,0): AUTO's nw (its Na argument) = IQ = 15 leaves no diagnostic sample. A trapping build stops at the ANSUB1 AUTO:1865 division (called at analts.f:2630); the reference executable signals IEEE_INVALID_FLAG and continues. Rust returns the invalid-diagnostic-sample error."
+
+[[deviations]]
+pattern = "NROU/{25,27}"
+output = "outcome"
+fortran = "success"
+rust = "rejected: Numerical(NumericalFailure(X11ExtremeScale *reason: EmptySample, stage: InitialSeasonalIrregular, pass: Reweighted, first: 1997Q1, last: 2001Q4, group: None*"
+reason = "Two cases: the second-pass 1997 Q1–2001 Q4 robust-scale sample excludes every observation. SDXTRM:57 then computes its even-sample median using abdev(0), outside the one-based array. An isolated bounds-checked build of the unchanged routine confirms that access in both rows. The empty sample has no median, and Build 62 has no fallback to reproduce. Rust returns a contextual empty-sample error instead of reading unrelated memory."
+
+[[deviations]]
+pattern = "DTBNONM/{04,62}"
+output = "Fortran execution/parser"
+fortran = "failed: X-13 exceeded its 600s deadline"
+rust = "rejected: Numerical(NumericalFailure(X11PseudoAdditive *stage: SeasonalIrregular, index: 237, period: 2010-09, reason: ZeroDivisor*"
+reason = "Both pseudo-additive calls divide zero observations by their zero initial centered trend. The reference executable times out; an isolated floating-point-trapping build of unchanged Build 62 confirms the first invalid division at X11PT2:430 calling DIVSUB. There is no defined ratio, and Build 62 has no recovery from it. Rust rejects the dated zero divisor rather than following the invalid continuation."
+
+[[deviations]]
+pattern = "EXP5050/{04,62}"
+output = "Fortran execution/parser"
+fortran = "failed: X-13 exceeded its 600s deadline"
+rust = "rejected: Numerical(NumericalFailure(X11PseudoAdditive *stage: SeasonalIrregular, index: 33, period: 1994-10, reason: ZeroDivisor*"
+reason = "Both pseudo-additive calls divide zero observations by their zero initial centered trend. The reference executable times out; an isolated floating-point-trapping build of unchanged Build 62 confirms the first invalid division at X11PT2:430 calling DIVSUB. There is no defined ratio, and Build 62 has no recovery from it. Rust rejects the dated zero divisor rather than following the invalid continuation."
+
+[[deviations]]
+pattern = "EXP5070/{04,62}"
+output = "Fortran execution/parser"
+fortran = "failed: X-13 exceeded its 600s deadline"
+rust = "rejected: Numerical(NumericalFailure(X11PseudoAdditive *stage: SeasonalIrregular, index: 154, period: 1997-11, reason: ZeroDivisor*"
+reason = "Both pseudo-additive calls divide zero observations by their zero initial centered trend. The reference executable times out; an isolated floating-point-trapping build of unchanged Build 62 confirms the first invalid division at X11PT2:430 calling DIVSUB. There is no defined ratio, and Build 62 has no recovery from it. Rust rejects the dated zero divisor rather than following the invalid continuation."
+
+[[deviations]]
+pattern = "CTQ05TCNR/{04,62}"
+output = "outcome"
+fortran = "success"
+rust = "rejected: Numerical(NumericalFailure(X11PseudoAdditive *stage: SeasonalIrregular, index: 2, period: 2012Q1, reason: ZeroDivisor*"
+reason = "Both pseudo-additive calls enter 0/0 in X11PT2:430/DIVSUB, confirmed by an isolated floating-point-trapping build of unchanged Build 62. The reference executable continues and saves all-zero D10–D13 despite nonzero observations. There is no defined ratio, and Build 62 has no recovery from it. Rust rejects the dated zero divisor instead of returning those bogus components."
+
+[[deviations]]
+pattern = "SFQ56A4TCNR/{04,62}"
+output = "outcome"
+fortran = "success"
+rust = "rejected: Numerical(NumericalFailure(X11PseudoAdditive *stage: SeasonalIrregular, index: 3, period: 2012Q3, reason: ZeroDivisor*"
+reason = "Both pseudo-additive calls enter 0/0 in X11PT2:430/DIVSUB, confirmed by an isolated floating-point-trapping build of unchanged Build 62. The reference executable continues and saves all-zero D10–D13 despite nonzero observations. There is no defined ratio, and Build 62 has no recovery from it. Rust rejects the dated zero divisor instead of returning those bogus components."
+
+[[deviations]]
+pattern = "SYN_U20/U-20b"
+output = "outcome"
+fortran = "success"
+rust = "rejected: CalendarYearOutOfRange *feature: Easter, year: 1900*"
+reason = "Without a model span, 12 backcasts from a 1901 start reach 1900, where adestr.f reads kdate(1900) outside its kdate(1901:2100) table; Rust returns the dated calendar-year error instead."
+
+[[deviations]]
+pattern = "{EXP6144,EXP7580,IMP4751,IMP5520,IMP6142,IMP6144}/U-01a"
+output = "Fortran execution/parser"
+fortran = "failed: X-13 exceeded its 600s deadline"
+rust = 'rejected: Numerical(NumericalFailure(X11PseudoAdditive \{ stage: SeasonalIrregular, index: 6, period: 1992-07, reason: ZeroDivisor \}))'
+reason = "As rows 04/62: a trapping build stops at 0/0 in X11PT2:430/DIVSUB and the reference executable hangs; Rust returns the dated zero-divisor error."
+
+[[deviations]]
+pattern = "IMP7741/U-01a"
+output = "Fortran execution/parser"
+fortran = "failed: X-13 exceeded its 600s deadline"
+rust = 'rejected: Numerical(NumericalFailure(X11PseudoAdditive \{ stage: SeasonalIrregular, index: 6, period: 1993-07, reason: ZeroDivisor \}))'
+reason = "As the first U-01a entry."
+
+[[deviations]]
+pattern = "IMP7700/U-01a"
+output = "Fortran execution/parser"
+fortran = "failed: X-13 exceeded its 600s deadline"
+rust = 'rejected: Numerical(NumericalFailure(X11PseudoAdditive \{ stage: SeasonalIrregular, index: 29, period: 1994-06, reason: ZeroDivisor \}))'
+reason = "As the first U-01a entry."
+
+[[deviations]]
+pattern = "EXP5050/U-01a"
+output = "Fortran execution/parser"
+fortran = "failed: X-13 exceeded its 600s deadline"
+rust = 'rejected: Numerical(NumericalFailure(X11PseudoAdditive \{ stage: SeasonalIrregular, index: 33, period: 1994-10, reason: ZeroDivisor \}))'
+reason = "As the first U-01a entry."
+
+[[deviations]]
+pattern = "EXP5070/U-01a"
+output = "Fortran execution/parser"
+fortran = "failed: X-13 exceeded its 600s deadline"
+rust = 'rejected: Numerical(NumericalFailure(X11PseudoAdditive \{ stage: SeasonalIrregular, index: 154, period: 1997-11, reason: ZeroDivisor \}))'
+reason = "As the first U-01a entry."
+
+[[deviations]]
+pattern = "DTBNONM/U-01a"
+output = "Fortran execution/parser"
+fortran = "failed: X-13 exceeded its 600s deadline"
+rust = 'rejected: Numerical(NumericalFailure(X11PseudoAdditive \{ stage: SeasonalIrregular, index: 237, period: 2010-09, reason: ZeroDivisor \}))'
+reason = "As the first U-01a entry."
+
+[[deviations]]
+pattern = "*/U-01b"
+output = "outcome"
+fortran = "success"
+rust = "rejected: Numerical(NumericalFailure(X11Easter *IndicatorRead*UninitializedOperand*"
+reason = "CHKEAS/EASTER read a March Xhol slot HOLIDY never wrote (sNaN-poisoned COMMON traps in exactly these cases); Build 62 sees the loader's zero."
+expected_matches = 108
+
+[[outside_corpus]]
+input = "Row 41 on 17 quarters holding 1e-300 and 1e-4"
+rust = "Numerical(NumericalFailure(NonFiniteOutput { output: ForecastUpper95, .. }))"
+fortran = "success; the upper forecast bound prints +Infinity"
+reason = "The log-scale bound overflows exp."
+
+[[outside_corpus]]
+input = "(0,1,0) regARIMA-X-11 with a two-month model span"
+rust = "Numerical(NumericalFailure(NonFiniteOutput { output: HannanQuinn, .. }))"
+fortran = "success; HQ prints -Infinity with IEEE_DIVIDE_BY_ZERO"
+reason = "n_eff = 1 makes ln(ln n) = -inf."
+
+[[outside_corpus]]
+input = "Direct pseudo-additive X-11, SD estimator, sigma limits 0.05/0.05"
+rust = "Numerical(NumericalFailure(X11ExtremeScale { reason: NonFiniteScale, .. }))"
+fortran = "success after IEEE_INVALID"
+reason = "An empty step-2 sample makes SDXTRM:49 take sqrt(0/0)."
+
+[[outside_corpus]]
+input = "Direct X-11 with Local seasonal shrinkage"
+rust = "Numerical(NumericalFailure(X11Shrinkage { reason: InsufficientAcceptedForecasts { actual: 0, .. }, .. }))"
+fortran = "success from undefined values"
+reason = "With no forecasts LOCSHK reads temps past Posffc, which are undefined."
+
+[[outside_corpus]]
+input = "SEATS AR(2) import with phi1 = 0 and |1 - phi2| < 1e-9"
+rust = "Numerical: Unusable { quantity: \"imported regular AR coefficient\", .. }"
+fortran = "hangs in SEATS; TRANS0's 0/0 leaves a NaN AR coefficient"
+reason = "TRANS0 resets phi2 to 1, so first/(1 - second) is 0/0. A nonzero phi1 gives an infinity that TRANS0 clips to +-1, which Rust reproduces."
+
+[[outside_corpus]]
+input = "SEATS AR(3) import whose TRANS0 coordinates reach 0/0 or inf/inf"
+rust = "Numerical: Unusable { quantity: \"imported regular AR coefficient\", .. }"
+fortran = "hangs in SEATS; the NaN AR coefficients reach RPQ"
+reason = "0/0 when phi3 is reset to 1 with phi1 + phi2 = 0, when phi3 = -1 with phi1 = phi2, or when X(1) is reset to -1 with X(2) = 0; inf/inf when both sums overflow. TRANS0 clips every other infinity to +-1, which Rust reproduces."
+
+[[outside_corpus]]
+input = "SEATS MA(2) import with theta1 = 0 and |1 - theta2| < 1e-9"
+rust = "Numerical: Unusable { quantity: \"MA2 import coordinate\", .. }"
+fortran = "hangs in SEATS; TRANS0's 0/0 leaves a NaN MA coefficient"
+reason = "TRANS0 resets theta2 to 1, so first/(1 - second) is 0/0. A nonzero theta1 gives an infinity that TRANS0 clips to +-0.99, which Rust reproduces."
+
+[[outside_corpus]]
+input = "SEATS AR(3) TRANSC cubic reaching 0/0 or a negative radicand"
+rust = "Numerical: Unusable { quantity: \"common-factor cubic <step>\", .. }"
+fortran = "success; NaN roots fall through false comparisons"
+reason = "The detector roots are NaN."
+
+[[outside_corpus]]
+input = "SEATS search whose first objective is below 1e-9"
+rust = "Numerical: UnwrittenSearchCount { .. }"
+fortran = "continues with an unwritten nv"
+reason = "ANSUB1 jumps to 5020 before setting nv, then reads it unwritten."
+
+[[outside_corpus]]
+input = "Monthly series starting in January, no extensions, more than 1020 observations"
+rust = "SeriesTooLong { .. }"
+fortran = "success on the first 1020 values; getsrs.f truncates silently"
+reason = "Build 62 adjusts a different series from the one supplied."
+
+[[outside_corpus]]
+input = "Final-constant variance <= 2*dpmpar(1), e.g. a stationary series scaled by 1e-9"
+rust = "Numerical(NumericalFailure(ModelSelectionConstantTestUnavailable { test: BeforeFinalCorrections, .. }))"
+fortran = "genrtt.f returns without Tval; chkmu.f tests an uninitialised local tval"
+reason = "The outcome depends on stack contents."
+
+[[outside_corpus]]
+input = "SEATS automatic model with a holiday, or explicit model and automatic transform with Easter, whose internal 3*s forecasts pass 2100, e.g. monthly 2088-2099 with Easter[8]"
+rust = "CalendarYearOutOfRange { feature: Easter, year: 2102, .. }"
+fortran = "success; adestr.f reads kdate(2101:2102) outside its kdate(1901:2100) table"
+reason = "The forecast-side counterpart of U-20b: SEATS raises forecasts to 3*s and the automatic paths evaluate holidays over them."
+
+[[outside_corpus]]
+input = "SEATS (2,1,1)(0,0,1) log with a zero trend-cycle numerator and a negative irregular spectrum (FRED series MIURN on row U-12n)"
+rust = "UnusableNumerator { .. }"
+fortran = "hang; the 600 s deadline expires"
+reason = "SPECTRUM calls ShowInvalDecomp before its 7052 rejection, which passes its uninitialised local THETP to MAspectrum. With a zero trend-cycle numerator MAK1 computes VAR = 0/THETP(1)**2 from stack contents; a NaN SA numerator spins C02AEF forever. A benign value gives the 7052 rejection, as on U-17b; Rust rejects the nonpositive SA numerator before MAK1."
+
+[[outside_corpus]]
+input = "Any observation equal to -99999 within dpeq's tolerance"
+rust = "an ordinary observation; NaN is the only gap marker"
+fortran = "a missing value (Mvcode): regARIMA estimates it, direct X-11 rejects it"
+reason = "Callers mark gaps with NaN, so a reserved code could only misread real data. Build 62 cannot take the value as data, so there is nothing to compare with."
+
+[[outside_corpus]]
+input = "A regARIMA-X-11 or SEATS series with gaps whose first value is observed and whose observed values are equal under dpeq, e.g. all 5s with one gap"
+rust = "the gaps take the constant, so the result is that of the same series without gaps; for zeros that is AllZeroInput"
+fortran = "success with values the input cannot produce, a rejection, or no saved adjustment, depending on the constant, the path and the gap's position"
+reason = "editor.f computes Same over the observed values, so x11ari.f skips the model that would estimate the gap and the series is decomposed with the 1e9 filler in the gap, giving values up to 1.5e12 on a series of 5s. Build 62 gives the constant back when missingval is set to it, which is what Rust does. Zeros stay refused, as zeros without gaps are, though Build 62 with missingval=0 returns zeros; under pseudo-additive its 1e9 filler reaches the 0/0 at X11PT2/DIVSUB that CTQ05TCNR/{04,62} lists. A leading gap is not covered: editor.f seeds its extremes from the missing code, so Same is false and the model runs."
+
+[[outside_corpus]]
+input = "An explicit regARIMA model on which rgarma.f's own filter call fails, for example intgpg.f can't factor G'G on all 5s with leading gaps"
+rust = "Numerical(NumericalFailure(ExactLikelihoodUnavailable { .. }))"
+fortran = "success with zero variance and no likelihood; SA can look sensible and forecasts can explode, up to 3.3e30 on a series of 5s"
+reason = "The deviation rests on this invalid state, not on the output. The filter fails, for example intgpg.f can't factor G'G and armafl.f returns PGPGER; models with AR terms could return PACFER or PVWPER instead. chkrt2.f never sets Inverr, so rgarma.f sets Var=0 and abandons the fit, prterr.f has no branch for the error, and the run continues, on a partial factor in the G'G case. Other inputs that reach ExactLikelihoodUnavailable are not covered: they have not been compared with Build 62."
+
+[[outside_corpus]]
+input = "ARMA coefficients (-1, 1, 1) or (0.5, 0, 0.5), whose roots all lie exactly on the unit circle"
+rust = "no root strictly inside (previous MA starting values accepted)"
+fortran = "a root strictly inside (previous MA starting values rejected)"
+reason = "Every root has modulus exactly 1; Build 62's answer is RPOLY rounding, and it answers the mirror (1, 1, -1) the other way. The Rust solver returns those roots exactly."
+
+[[outside_corpus]]
+input = "Monthly series, usually with an extreme value, whose spectral peak test stalls Build 62 (ten fuzz cases on rows such as 41, 42, 48 and 95)"
+rust = "success"
+fortran = "hang past 585 s in spcdrv, idpeak, shlsrt; the tables written before the stall agree"
+reason = "idpeak.f sorts a 61-element spectrum with shlsrt, a Shell sort that ends only on a total order. NaN in the spectrum would break that order; this is inferred from one stack sample, not inspected in all ten cases. Build 62 leaves no complete result to match."
+
+[[outside_corpus]]
+input = "A series dated in a very large year, e.g. a start in 9999 or 99999"
+rust = "success"
+fortran = "rejected: dtoc.f stops with \"Cannot write ... in 21 spaces.\""
+reason = "The refusal comes from Build 62's number formatting, not from the series or the model: the same data agrees at year 2000. Rust has no such limit. The year where the refusal starts is unknown."
+
+[[outside_corpus]]
+input = "A leading gap with every observed value exactly 1e9, log transform, flow trading day and a leap-year length treatment (15 cases on rows 41, 42, 78, 81 and U-10)"
+rust = "success"
+fortran = "rejected: Differencing has annihilated the series"
+reason = "Rust's transformed series carries the leap-year prior, so its differenced series is not all zero and the annihilation check does not fire. Why Build 62's series has no prior at that check is untraced."

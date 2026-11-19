@@ -1,0 +1,1556 @@
+# The rows of docs/parity-call-table.md, one [[specs]] entry per row. Each row
+# varies its section's baseline. A series shorter than `length.min` skips the
+# row; a longer one is cut to its most recent `length.max` observations,
+# usually the most Build 62 accepts for that configuration.
+
+[[specs]]
+id = "01"
+label = "x11: multiplicative"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "02"
+label = "x11: additive"
+frequencies = ["monthly", "quarterly"]
+requires_positive = false
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "additive", seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "03"
+label = "x11: log-additive"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "log_additive", seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "04"
+label = "x11: pseudo-additive"
+frequencies = ["monthly", "quarterly"]
+requires_positive = false
+requires_nonnegative = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "pseudo_additive", seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "05"
+label = "x11: filter S3x1"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x1" }
+
+[[specs]]
+id = "06"
+label = "x11: filter S3x3"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x3" }
+
+[[specs]]
+id = "07"
+label = "x11: filter S3x9"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x9" }
+
+[[specs]]
+id = "08"
+label = "x11: filter S3x15"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x15" }
+
+[[specs]]
+id = "09"
+label = "x11: filter stable"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "stable" }
+
+[[specs]]
+id = "10"
+label = "x11: filter MSR (Census default)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "msr" }
+
+[[specs]]
+id = "11"
+label = "x11: filter x11default"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "x11_default" }
+
+[[specs]]
+id = "12"
+label = "x11: mixed per-period filters"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", seasonal_filters = { monthly = ["s3x3", "s3x5", "s3x9", "s3x5", "s3x3", "s3x5", "s3x9", "s3x5", "s3x3", "s3x5", "s3x9", "s3x5"] } }
+quarterly_configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", seasonal_filters = { quarterly = ["s3x3", "s3x5", "s3x9", "s3x5"] } }
+
+[[specs]]
+id = "13"
+label = "x11: short series (last 4 years)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 48 }, quarterly = { min = 1, max = 16 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "14"
+label = "x11: short series, requested filter kept (sfshort=yes)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 48 }, quarterly = { min = 1, max = 16 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", short_series_filters = "use_requested" }
+
+[[specs]]
+id = "15"
+label = "x11: Henderson 9"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", trend_filter = { kind = "henderson", terms = 9 } }
+
+[[specs]]
+id = "16"
+label = "x11: Henderson 13"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", trend_filter = { kind = "henderson", terms = 13 } }
+
+[[specs]]
+id = "17"
+label = "x11: Henderson 23"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", trend_filter = { kind = "henderson", terms = 23 } }
+
+[[specs]]
+id = "18"
+label = "x11: Henderson I/C ratio set"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", trend_filter = { kind = "henderson_with_options", options = { length = 13, ic_ratio = 2, true_seven_term = false } } }
+
+[[specs]]
+id = "19"
+label = "x11: true 7-term endpoints"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", trend_filter = { kind = "henderson_with_options", options = { length = 7, true_seven_term = true } } }
+
+[[specs]]
+id = "20"
+label = "x11: sigma limits 2.0/3.0"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", sigma_limits = { lower = 2, upper = 3 } }
+
+[[specs]]
+id = "21"
+label = "x11: calendar sigma, all"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", extreme_scale = { kind = "by_calendar_period" } }
+
+[[specs]]
+id = "22"
+label = "x11: calendar sigma, significant"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", extreme_scale = { kind = "automatic" } }
+
+[[specs]]
+id = "23"
+label = "x11: calendar sigma, grouped"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", extreme_scale = { kind = "grouped", groups = { frequency = "monthly", groups = ["selected", "complement", "selected", "complement", "selected", "complement", "selected", "complement", "selected", "complement", "selected", "complement"] } } }
+quarterly_configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", extreme_scale = { kind = "grouped", groups = { frequency = "quarterly", groups = ["selected", "complement", "selected", "complement"] } } }
+
+[[specs]]
+id = "24"
+label = "x11: extremes, weighted MAD"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", extreme_estimator = "median_absolute_deviation" }
+
+[[specs]]
+id = "25"
+label = "x11: extremes, tau MAD"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", extreme_estimator = "tau_adjusted_median_absolute_deviation" }
+
+[[specs]]
+id = "26"
+label = "x11: extremes, log weighted MAD"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", extreme_estimator = "log_median_absolute_deviation" }
+
+[[specs]]
+id = "27"
+label = "x11: extremes, log tau MAD"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", extreme_estimator = "tau_adjusted_log_median_absolute_deviation" }
+
+[[specs]]
+id = "28"
+label = "x11: trend only"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", decomposition = "trend_only" }
+
+[[specs]]
+id = "29"
+label = "x11: global shrinkage"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", seasonal_shrinkage = "global" }
+
+[[specs]]
+id = "30"
+label = "x11: legacy Easter prepass"
+frequencies = ["monthly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", legacy_easter = "estimate" }
+
+[[specs]]
+id = "31"
+label = "x11+reg: airline, log"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "32"
+label = "x11+reg: airline, identity (additive)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = false
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "none", mode = "additive", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "33"
+label = "x11+reg: airline + constant"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = true, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "34"
+label = "x11+reg: model (1,1,0)(0,1,1)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 1, d = 1, q = 0 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "35"
+label = "x11+reg: model (2,1,1)(0,1,1)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 2, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "36"
+label = "x11+reg: model (0,1,1)(1,1,1)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 1, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "37"
+label = "x11+reg: automatic transform"
+frequencies = ["monthly", "quarterly"]
+requires_positive = false
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "automatic_transform_reg_arima_x11", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "38"
+label = "x11+reg: automatic model"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "automatic_model_x11", transform = { kind = "explicit", transform = "log" }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "39"
+label = "x11+reg: no forecasts"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "periods", periods = 0 }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "40"
+label = "x11+reg: 3-year forecasts + 1-year backcasts"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 324 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "periods", periods = 36 }, backcast_horizon = 12, seasonal_filter = "s3x5" }
+quarterly_configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "periods", periods = 12 }, backcast_horizon = 4, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "41"
+label = "x11+reg: trading day"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", calendar = { basis = { kind = "flow_trading_day", value = { contrast = "six_coefficient", length_treatment = "leap_year" } } } }
+
+[[specs]]
+id = "42"
+label = "x11+reg: working day (1-coefficient TD)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", calendar = { basis = { kind = "flow_trading_day", value = { contrast = "weekday_weekend", length_treatment = "leap_year" } } } }
+
+[[specs]]
+id = "43"
+label = "x11+reg: trading day, no leap-year effect"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", calendar = { basis = { kind = "flow_trading_day", value = { contrast = "six_coefficient", length_treatment = "no_length_effect" } } } }
+
+[[specs]]
+id = "44"
+label = "x11+reg: trading day + length of period"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", calendar = { basis = { kind = "flow_trading_day", value = { contrast = "six_coefficient", length_treatment = "length_of_period" } } } }
+
+[[specs]]
+id = "45"
+label = "x11+reg: leap year only"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", calendar = { basis = { kind = "length", value = "leap_year" } } }
+
+[[specs]]
+id = "46"
+label = "x11+reg: length of period only"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", calendar = { basis = { kind = "length", value = "length_of_period" } } }
+
+[[specs]]
+id = "47"
+label = "x11+reg: Easter[8]"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", calendar = { easter = 8 } }
+
+[[specs]]
+id = "48"
+label = "x11+reg: Labor Day[8]"
+frequencies = ["monthly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", calendar = { labor_day = 8 } }
+
+[[specs]]
+id = "49"
+label = "x11+reg: Thanksgiving[1]"
+frequencies = ["monthly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", calendar = { thanksgiving = 1 } }
+
+[[specs]]
+id = "50"
+label = "x11+reg: stock trading day (end of month)"
+frequencies = ["monthly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", calendar = { basis = { kind = "stock_trading_day", value = { contrast = "six_coefficient", sample_day = 31 } } } }
+
+[[specs]]
+id = "51"
+label = "x11+reg: AIC-tested trading day + Easter (aictest)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "reg_arima", method = "x11", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, calendar = { basis = { kind = "flow_trading_day", value = { contrast = "six_coefficient", length_treatment = "leap_year" } }, easter = 8 }, aic_test = true } }
+
+[[specs]]
+id = "52"
+label = "x11+reg: outliers AO+LS"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", outliers = { types = ["additive", "level_shift"], method = "add_one", critical_values = { kind = "automatic" } } }
+
+[[specs]]
+id = "53"
+label = "x11+reg: outliers AO+LS+TC"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", outliers = { types = ["additive", "level_shift", "temporary_change"], method = "add_one", critical_values = { kind = "automatic" } } }
+
+[[specs]]
+id = "54"
+label = "x11+reg: outliers add-all method"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", outliers = { types = ["additive", "level_shift", "temporary_change"], method = "add_all", critical_values = { kind = "automatic" } } }
+
+[[specs]]
+id = "55"
+label = "x11+reg: outliers, critical value 3.5"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", outliers = { types = ["additive", "level_shift"], method = "add_one", critical_values = { kind = "shared", value = 3.5 } } }
+
+[[specs]]
+id = "56"
+label = "x11+reg: outliers, TC rate 0.8"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", outliers = { types = ["additive", "level_shift", "temporary_change"], method = "add_one", critical_values = { kind = "automatic" }, temporary_change_rate = 0.8 } }
+
+[[specs]]
+id = "57"
+label = "x11+reg: manual outliers (AO, LS, TC at fixed positions)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "reg_arima", method = "x11", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, manual_outliers = true } }
+
+[[specs]]
+id = "58"
+label = "x11+reg: outliers removed from final SA"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", outliers = { types = ["additive", "level_shift", "temporary_change"], method = "add_one", critical_values = { kind = "automatic" } }, final_outliers = { kind = "remove", types = ["additive", "level_shift", "temporary_change"] } }
+
+[[specs]]
+id = "59"
+label = "x11+reg: TC allocated to trend"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", outliers = { types = ["additive", "level_shift", "temporary_change"], method = "add_one", critical_values = { kind = "automatic" } }, temporary_change_allocation = "trend" }
+
+[[specs]]
+id = "60"
+label = "x11+reg: Easter kept in SA (keepholiday)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", calendar = { easter = 8 }, holiday_adjustment = "retain" }
+
+[[specs]]
+id = "61"
+label = "x11+reg: local shrinkage"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", seasonal_shrinkage = "local" }
+
+[[specs]]
+id = "62"
+label = "x11+reg: pseudo-additive"
+frequencies = ["monthly", "quarterly"]
+requires_positive = false
+requires_nonnegative = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "none", mode = "pseudo_additive", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "63"
+label = "x11+reg: combo — auto transform + auto model + TD + Easter + AO/LS/TC"
+frequencies = ["monthly", "quarterly"]
+requires_positive = false
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "automatic_model_x11", transform = { kind = "automatic", options = { aic_difference = -2 } }, calendar = { basis = { kind = "flow_trading_day", value = { contrast = "six_coefficient", length_treatment = "leap_year" } }, easter = 8 }, outliers = { types = ["additive", "level_shift", "temporary_change"], method = "add_one", critical_values = { kind = "automatic" } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "64"
+label = "seats: airline (0,1,1)(0,1,1), log"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "65"
+label = "seats: seasonal MA (0,1,0)(0,1,1), log"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 0 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "66"
+label = "seats: AR1 (1,1,0)(0,1,1), log"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 1, d = 1, q = 0 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "67"
+label = "seats: ARMA11 (1,1,1)(0,1,1), log"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 1, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "68"
+label = "seats: second difference (0,2,1)(0,1,1), log"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 2, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "69"
+label = "seats: AR2 (2,1,0)(0,1,1), log"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 2, d = 1, q = 0 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "70"
+label = "seats: airline, identity"
+frequencies = ["monthly", "quarterly"]
+requires_positive = false
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "none" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "71"
+label = "seats: seasonal MA, identity"
+frequencies = ["monthly", "quarterly"]
+requires_positive = false
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "none" }, model = { regular = { p = 0, d = 1, q = 0 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "72"
+label = "seats: AR1, identity"
+frequencies = ["monthly", "quarterly"]
+requires_positive = false
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "none" }, model = { regular = { p = 1, d = 1, q = 0 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "73"
+label = "seats: ARMA11, identity"
+frequencies = ["monthly", "quarterly"]
+requires_positive = false
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "none" }, model = { regular = { p = 1, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "74"
+label = "seats: second difference, identity"
+frequencies = ["monthly", "quarterly"]
+requires_positive = false
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "none" }, model = { regular = { p = 0, d = 2, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "75"
+label = "seats: AR2, identity"
+frequencies = ["monthly", "quarterly"]
+requires_positive = false
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "none" }, model = { regular = { p = 2, d = 1, q = 0 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "76"
+label = "seats: airline + constant"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = true, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "77"
+label = "seats: automatic transform"
+frequencies = ["monthly", "quarterly"]
+requires_positive = false
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "automatic", options = { aic_difference = -2 } }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "78"
+label = "seats: trading day"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, calendar = { basis = { kind = "flow_trading_day", value = { contrast = "six_coefficient", length_treatment = "leap_year" } } } } }
+
+[[specs]]
+id = "79"
+label = "seats: leap year only"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, calendar = { basis = { kind = "length", value = "leap_year" } } } }
+
+[[specs]]
+id = "80"
+label = "seats: Easter[8]"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, calendar = { easter = 8 } } }
+
+[[specs]]
+id = "81"
+label = "seats: trading day + Easter"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, calendar = { basis = { kind = "flow_trading_day", value = { contrast = "six_coefficient", length_treatment = "leap_year" } }, easter = 8 } } }
+
+[[specs]]
+id = "82"
+label = "seats: AIC-tested trading day + Easter (aictest)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, calendar = { basis = { kind = "flow_trading_day", value = { contrast = "six_coefficient", length_treatment = "leap_year" } }, easter = 8 }, aic_test = true } }
+
+[[specs]]
+id = "83"
+label = "seats: outliers AO+LS+TC"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, outliers = { types = ["additive", "level_shift", "temporary_change"], method = "add_one", critical_values = { kind = "automatic" } } } }
+
+[[specs]]
+id = "84"
+label = "seats: manual outliers (AO, LS, TC at fixed positions)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, manual_outliers = true } }
+
+[[specs]]
+id = "85"
+label = "seats: no forecasts"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "periods", periods = 0 }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "86"
+label = "seats: automatic model"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "87"
+label = "seats: combo — auto transform + auto model + TD + Easter + AO/LS/TC"
+frequencies = ["monthly", "quarterly"]
+requires_positive = false
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "automatic", options = { aic_difference = -2 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, calendar = { basis = { kind = "flow_trading_day", value = { contrast = "six_coefficient", length_treatment = "leap_year" } }, easter = 8 }, outliers = { types = ["additive", "level_shift", "temporary_change"], method = "add_one", critical_values = { kind = "automatic" } } } }
+
+[[specs]]
+id = "88"
+label = "seats: model (2,1,1)(0,1,1)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 2, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "89"
+label = "seats: model (0,1,1)(1,1,0)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 1, d = 1, q = 0 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "90"
+label = "seats: model (3,1,0)(0,1,1)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 3, d = 1, q = 0 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "91"
+label = "seats: 3-year forecasts + 1-year backcasts"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "periods", periods = 36 }, backcast_horizon = 12 } }
+quarterly_configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "periods", periods = 12 }, backcast_horizon = 4 } }
+
+[[specs]]
+id = "92"
+label = "seats: stock trading day"
+frequencies = ["monthly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, calendar = { basis = { kind = "stock_trading_day", value = { contrast = "six_coefficient", sample_day = 31 } } } } }
+
+[[specs]]
+id = "93"
+label = "seats: Labor Day[8]"
+frequencies = ["monthly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, calendar = { labor_day = 8 } } }
+
+[[specs]]
+id = "94"
+label = "seats: Thanksgiving[1]"
+frequencies = ["monthly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, calendar = { thanksgiving = 1 } } }
+
+
+# Span rows 95–101.
+# Spans are relative to the bounded input: modelspan ends at one-based n-3*frequency
+# or starts at zero-based n/3; outlierspan is the half-open middle third n/3..2*n/3.
+# At least ten years, positive log input, one-year forecasts, and no backcasts.
+
+[[specs]]
+id = "95"
+label = "x11+reg: modelspan excludes final three years"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 120, max = 780 }, quarterly = { min = 40, max = 336 } }
+configuration = { kind = "reg_arima", method = "x11", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, model_span = "exclude_last_three_years" } }
+
+[[specs]]
+id = "96"
+label = "x11+reg: modelspan excludes first third"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 120, max = 780 }, quarterly = { min = 40, max = 336 } }
+configuration = { kind = "reg_arima", method = "x11", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, model_span = "exclude_first_third" } }
+
+[[specs]]
+id = "97"
+label = "x11+reg: outlierspan middle third"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 120, max = 780 }, quarterly = { min = 40, max = 336 } }
+configuration = { kind = "reg_arima", method = "x11", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, outliers = { types = ["additive", "level_shift", "temporary_change"], method = "add_one", critical_values = { kind = "automatic" } }, outlier_span = "middle_third" } }
+
+[[specs]]
+id = "98"
+label = "x11+reg: modelspan excludes final three years + automatic model + outliers"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 120, max = 780 }, quarterly = { min = 40, max = 336 } }
+configuration = { kind = "reg_arima", method = "x11", request = { transform = { kind = "explicit", transform = "log" }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, model_span = "exclude_last_three_years", outliers = { types = ["additive", "level_shift", "temporary_change"], method = "add_one", critical_values = { kind = "automatic" } } } }
+
+[[specs]]
+id = "99"
+label = "seats: modelspan excludes final three years"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 120, max = 780 }, quarterly = { min = 40, max = 336 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, model_span = "exclude_last_three_years" } }
+
+[[specs]]
+id = "100"
+label = "seats: outlierspan middle third"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 120, max = 780 }, quarterly = { min = 40, max = 336 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, outliers = { types = ["additive", "level_shift", "temporary_change"], method = "add_one", critical_values = { kind = "automatic" } }, outlier_span = "middle_third" } }
+
+[[specs]]
+id = "101"
+label = "seats: modelspan excludes final three years + automatic model + outliers"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 120, max = 780 }, quarterly = { min = 40, max = 336 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, model_span = "exclude_last_three_years", outliers = { types = ["additive", "level_shift", "temporary_change"], method = "add_one", critical_values = { kind = "automatic" } } } }
+
+
+# Supplied-regressor rows 102–108. SEATS rows 105–107 supply three future years.
+# Requested forecasts remain one year; X11 rows supply one future year.
+# Calendar columns are centered over the whole supplied span, including future values.
+# Baseline and length bounds follow row 57, with no manual outliers.
+
+[[specs]]
+id = "102"
+label = "x11+reg: supplied working days"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "reg_arima", method = "x11", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, user_regressors = { kind = "working_days", future_years = 1 } } }
+
+[[specs]]
+id = "103"
+label = "x11+reg: supplied Orthodox Easter holiday"
+frequencies = ["monthly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 } }
+configuration = { kind = "reg_arima", method = "x11", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, user_regressors = { kind = "orthodox_easter", future_years = 1 } } }
+
+[[specs]]
+id = "104"
+label = "x11+reg: supplied intervention ramp"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "reg_arima", method = "x11", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, user_regressors = { kind = "ramp", future_years = 1 } } }
+
+[[specs]]
+id = "105"
+label = "seats: supplied working days"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, user_regressors = { kind = "working_days", future_years = 3 } } }
+
+[[specs]]
+id = "106"
+label = "seats: supplied Orthodox Easter holiday"
+frequencies = ["monthly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, user_regressors = { kind = "orthodox_easter", future_years = 3 } } }
+
+[[specs]]
+id = "107"
+label = "seats: supplied intervention ramp"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, user_regressors = { kind = "ramp", future_years = 3 } } }
+
+[[specs]]
+id = "108"
+label = "x11+reg: supplied working days + Orthodox Easter + ramp"
+frequencies = ["monthly"]
+requires_positive = true
+requires_nonnegative = false
+length = { monthly = { min = 1, max = 780 } }
+configuration = { kind = "reg_arima", method = "x11", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, user_regressors = { kind = "all", future_years = 1 } } }
+
+# Robustness rows on the FRED corpus (U-01a to U-12r).
+
+[[specs]]
+id = "U-01a"
+label = "x11: pseudo-additive + legacy Easter, retained"
+frequencies = ["monthly"]
+requires_nonnegative = true
+length = { monthly = { min = 1, max = 780 } }
+configuration = { kind = "direct_x11", mode = "pseudo_additive", seasonal_filter = "s3x5", legacy_easter = "estimate", holiday_adjustment = "retain" }
+
+[[specs]]
+id = "U-01b"
+label = "x11+reg: legacy Easter"
+frequencies = ["monthly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", legacy_easter = "estimate" }
+
+[[specs]]
+id = "U-02a"
+label = "x11: extremes on observed span, mult"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", extreme_estimation_span = "observed_only" }
+
+[[specs]]
+id = "U-02b"
+label = "x11+reg: extremes on observed span, add"
+frequencies = ["monthly", "quarterly"]
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "none", mode = "additive", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", extreme_estimation_span = "observed_only" }
+
+[[specs]]
+id = "U-02c"
+label = "x11+reg: extremes on observed span, mult"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", extreme_estimation_span = "observed_only" }
+
+[[specs]]
+id = "U-03"
+label = "x11+reg: log-additive"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "log_additive", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "U-04a"
+label = "x11: mixed S3x1/MSR filters"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", seasonal_filters = { monthly = ["s3x1", "msr", "msr", "s3x5", "msr", "msr", "s3x9", "msr", "msr", "s3x3", "msr", "msr"] } }
+quarterly_configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", seasonal_filters = { quarterly = ["s3x1", "msr", "s3x5", "msr"] } }
+
+[[specs]]
+id = "U-04b"
+label = "x11: mixed MSR/stable/S3x15 filters"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", seasonal_filters = { monthly = ["msr", "s3x1", "msr", "s3x3", "stable", "msr", "s3x15", "msr", "x11_default", "s3x5", "msr", "s3x9"] } }
+quarterly_configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", seasonal_filters = { quarterly = ["msr", "s3x1", "stable", "msr"] } }
+
+[[specs]]
+id = "U-05a"
+label = "x11+reg: Henderson 9"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", trend_filter = { kind = "henderson", terms = 9 } }
+
+[[specs]]
+id = "U-05b"
+label = "x11+reg: Henderson 13"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", trend_filter = { kind = "henderson", terms = 13 } }
+
+[[specs]]
+id = "U-05c"
+label = "x11+reg: Henderson 23"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", trend_filter = { kind = "henderson", terms = 23 } }
+
+[[specs]]
+id = "U-05d"
+label = "x11: automatic Henderson, true 7-term"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 340 } }
+configuration = { kind = "direct_x11", mode = "multiplicative", seasonal_filter = "s3x5", trend_filter = { kind = "automatic_with_true_seven_term" } }
+
+[[specs]]
+id = "U-06a"
+label = "x11+reg: (0,1,2)(0,1,1)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 2 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "U-06b"
+label = "x11+reg: (0,1,3)(0,1,1)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 3 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "U-06c"
+label = "x11+reg: (0,1,1)(0,1,2)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 2 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "U-06d"
+label = "x11+reg: (0,1,1)(2,1,0)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 2, d = 1, q = 0 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "U-06e"
+label = "x11+reg: (1,0,1)(0,1,1) + constant"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 1, d = 0, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = true, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "U-06f"
+label = "x11+reg: (0,1,1)(0,0,1)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 0, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "U-06g"
+label = "x11+reg: (1,1,1)(1,1,1), minimum span"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 39 }, quarterly = { min = 1, max = 15 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 1, d = 1, q = 1 }, seasonal = { p = 1, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "U-07a"
+label = "x11+reg: row 63 + 12 backcasts (rmfix)"
+frequencies = ["monthly", "quarterly"]
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 324 } }
+configuration = { kind = "automatic_model_x11", transform = { kind = "automatic", options = { aic_difference = -2 } }, calendar = { basis = { kind = "flow_trading_day", value = { contrast = "six_coefficient", length_treatment = "leap_year" } }, easter = 8 }, outliers = { types = ["additive", "level_shift", "temporary_change"], method = "add_one", critical_values = { kind = "automatic" } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 12, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "U-07b"
+label = "x11+reg: row 63, 6 forecasts + 12 backcasts (rmfix b > f)"
+frequencies = ["monthly"]
+length = { monthly = { min = 1, max = 780 } }
+configuration = { kind = "automatic_model_x11", transform = { kind = "automatic", options = { aic_difference = -2 } }, calendar = { basis = { kind = "flow_trading_day", value = { contrast = "six_coefficient", length_treatment = "leap_year" } }, easter = 8 }, outliers = { types = ["additive", "level_shift", "temporary_change"], method = "add_one", critical_values = { kind = "automatic" } }, forecast_horizon = { kind = "periods", periods = 6 }, backcast_horizon = 12, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "U-07c"
+label = "x11+reg: automatic + supplied working days"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "reg_arima", method = "x11", request = { transform = { kind = "explicit", transform = "log" }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, user_regressors = { kind = "working_days", future_years = 1 } } }
+
+[[specs]]
+id = "U-07d"
+label = "x11+reg: automatic + LS outliers"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "automatic_model_x11", transform = { kind = "explicit", transform = "log" }, outliers = { types = ["level_shift"], method = "add_one", critical_values = { kind = "automatic" } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "U-07e"
+label = "x11+reg: automatic + add-all, per-type critical"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "automatic_model_x11", transform = { kind = "explicit", transform = "log" }, outliers = { types = ["additive", "level_shift", "temporary_change"], method = "add_all", critical_values = { kind = "per_type", additive = 4.0, level_shift = 3.5, temporary_change = 3.8 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "U-07f"
+label = "x11+reg: automatic, 24 forecasts"
+frequencies = ["monthly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 } }
+configuration = { kind = "automatic_model_x11", transform = { kind = "explicit", transform = "log" }, forecast_horizon = { kind = "periods", periods = 24 }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "U-07g"
+label = "x11+reg: automatic + AO/LS outliers + working days and ramp"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "reg_arima", method = "x11", request = { transform = { kind = "explicit", transform = "log" }, outliers = { types = ["additive", "level_shift"], method = "add_one", critical_values = { kind = "automatic" } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, user_regressors = { kind = "working_days_and_ramp", future_years = 1 } } }
+
+[[specs]]
+id = "U-08a"
+label = "x11+reg: outliers LS only"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", outliers = { types = ["level_shift"], method = "add_one", critical_values = { kind = "automatic" } } }
+
+[[specs]]
+id = "U-08b"
+label = "x11+reg: outliers TC only"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", outliers = { types = ["temporary_change"], method = "add_one", critical_values = { kind = "automatic" } } }
+
+[[specs]]
+id = "U-08c"
+label = "x11+reg: outliers LS+TC, per-type critical"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", outliers = { types = ["level_shift", "temporary_change"], method = "add_one", critical_values = { kind = "per_type", level_shift = 3.5, temporary_change = 3.8 } } }
+
+[[specs]]
+id = "U-09a"
+label = "x11+reg: stock TD, day 15"
+frequencies = ["monthly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", calendar = { basis = { kind = "stock_trading_day", value = { contrast = "six_coefficient", sample_day = 15 } } } }
+
+[[specs]]
+id = "U-09b"
+label = "x11+reg: stock weekday/weekend TD, day 15"
+frequencies = ["monthly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", calendar = { basis = { kind = "stock_trading_day", value = { contrast = "weekday_weekend", sample_day = 15 } } } }
+
+[[specs]]
+id = "U-09c"
+label = "x11+reg: Easter[1]"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", calendar = { easter = 1 } }
+
+[[specs]]
+id = "U-09d"
+label = "x11+reg: Easter[15]"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", calendar = { easter = 15 } }
+
+[[specs]]
+id = "U-09e"
+label = "x11+reg: Labor Day[15]"
+frequencies = ["monthly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", calendar = { labor_day = 15 } }
+
+[[specs]]
+id = "U-09f"
+label = "x11+reg: Thanksgiving[-1]"
+frequencies = ["monthly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 } }
+configuration = { kind = "calendar_outlier_reg_arima_x11", transform = "log", mode = "multiplicative", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5", calendar = { thanksgiving = -1 } }
+
+[[specs]]
+id = "U-10"
+label = "x11+reg: TD + holidays + ramp, model span"
+frequencies = ["monthly"]
+requires_positive = true
+length = { monthly = { min = 120, max = 780 } }
+configuration = { kind = "reg_arima", method = "x11", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, calendar = { basis = { kind = "flow_trading_day", value = { contrast = "six_coefficient", length_treatment = "leap_year" } }, easter = 8, labor_day = 8, thanksgiving = 1 }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, model_span = "exclude_last_three_years", user_regressors = { kind = "ramp", future_years = 1 } } }
+
+[[specs]]
+id = "U-11"
+label = "x11+reg: manual outliers, TC rate 0.8"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "reg_arima", method = "x11", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, manual_outliers = true, manual_temporary_change_rate = 0.8 } }
+
+[[specs]]
+id = "U-12a"
+label = "seats: (0,1,2)(0,1,1)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 2 }, seasonal = { p = 0, d = 1, q = 1 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-12b"
+label = "seats: (1,1,2)(0,1,1)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 1, d = 1, q = 2 }, seasonal = { p = 0, d = 1, q = 1 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-12c"
+label = "seats: (2,1,2)(0,1,1)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 2, d = 1, q = 2 }, seasonal = { p = 0, d = 1, q = 1 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-12d"
+label = "seats: (3,1,1)(0,1,1)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 3, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-12e"
+label = "seats: (0,1,1)(0,0,0)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 0, q = 0 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-12f"
+label = "seats: (1,1,0)(0,0,0)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 1, d = 1, q = 0 }, seasonal = { p = 0, d = 0, q = 0 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-12g"
+label = "seats: (1,1,1)(0,0,0)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 1, d = 1, q = 1 }, seasonal = { p = 0, d = 0, q = 0 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-12h"
+label = "seats: (2,1,1)(0,0,0)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 2, d = 1, q = 1 }, seasonal = { p = 0, d = 0, q = 0 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-12i"
+label = "seats: (1,0,0)(1,1,0)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 1, d = 0, q = 0 }, seasonal = { p = 1, d = 1, q = 0 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-12j"
+label = "seats: (3,0,1)(0,1,1)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 3, d = 0, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-12k"
+label = "seats: (1,1,1)(0,0,1)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 1, d = 1, q = 1 }, seasonal = { p = 0, d = 0, q = 1 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-12l"
+label = "seats: (0,1,2)(0,0,0)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 2 }, seasonal = { p = 0, d = 0, q = 0 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-12m"
+label = "seats: (2,1,2)(0,0,0)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 2, d = 1, q = 2 }, seasonal = { p = 0, d = 0, q = 0 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-12n"
+label = "seats: (2,1,1)(0,0,1)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 2, d = 1, q = 1 }, seasonal = { p = 0, d = 0, q = 1 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-12o"
+label = "seats: (3,1,1)(0,0,1)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 3, d = 1, q = 1 }, seasonal = { p = 0, d = 0, q = 1 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-12p"
+label = "seats: (0,1,0)(0,1,0)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 0 }, seasonal = { p = 0, d = 1, q = 0 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-12q"
+label = "seats: (3,1,1)(1,1,1)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 3, d = 1, q = 1 }, seasonal = { p = 1, d = 1, q = 1 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-12r"
+label = "seats: (0,1,1)(0,0,1)"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 328 } }
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 0, q = 1 } }, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+
+# Robustness rows on the synthetic sub-corpus (tests/parity/synthetic.toml).
+
+[[specs]]
+id = "U-14"
+label = "U-14 SEATS (3,1,0)(1,1,0) with well-separated AR roots (26-coefficient numerator)"
+frequencies = ["monthly"]
+length = { monthly = { min = 1, max = 780 } }
+series = ["SYN_U14A", "SYN_U14B"]
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "none" }, model = { regular = { p = 3, d = 1, q = 0 }, seasonal = { p = 1, d = 1, q = 0 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-15a"
+label = "U-15 SEATS stationary AR with no trend or cycle: (1,0,0) zero-mean φ̂ ≤ −0.9"
+frequencies = ["monthly"]
+length = { monthly = { min = 1, max = 780 } }
+series = ["SYN_U15A"]
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "none" }, model = { regular = { p = 1, d = 0, q = 0 }, seasonal = { p = 0, d = 0, q = 0 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-15b"
+label = "U-15 SEATS stationary AR with no trend or cycle: (2,0,0) roots at ±60°"
+frequencies = ["monthly"]
+length = { monthly = { min = 1, max = 780 } }
+series = ["SYN_U15B"]
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "none" }, model = { regular = { p = 2, d = 0, q = 0 }, seasonal = { p = 0, d = 0, q = 0 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-16"
+label = "U-16 SEATS (0,1,0)(1,1,0), Φ near −1, forced refit"
+frequencies = ["monthly"]
+length = { monthly = { min = 1, max = 780 } }
+series = ["SYN_U16A", "SYN_U16B"]
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "none" }, model = { regular = { p = 0, d = 1, q = 0 }, seasonal = { p = 1, d = 1, q = 0 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-17a"
+label = "U-17 SEATS (0,1,1)(1,0,1) misfit reaching MODEL CHANGED TO (0,1,1)(1,0,0)"
+frequencies = ["monthly"]
+length = { monthly = { min = 1, max = 780 } }
+series = ["SYN_U17A"]
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "none" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 1, d = 0, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-17b"
+label = "U-17 SEATS (1,1,0)(1,0,1) both-reject variant"
+frequencies = ["monthly"]
+length = { monthly = { min = 1, max = 780 } }
+series = ["SYN_U17B"]
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "none" }, model = { regular = { p = 1, d = 1, q = 0 }, seasonal = { p = 1, d = 0, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-18"
+label = "U-18 SEATS Ar3SeasonalMa with φ3 ≈ −0.99 (unit-modulus snap)"
+frequencies = ["monthly"]
+length = { monthly = { min = 1, max = 780 } }
+series = ["SYN_U18"]
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "none" }, model = { regular = { p = 3, d = 1, q = 0 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-19a"
+label = "U-19 constant series through explicit regARIMA-X-11: airline"
+frequencies = ["monthly"]
+length = { monthly = { min = 1, max = 780 } }
+series = ["SYN_U19"]
+configuration = { kind = "explicit_reg_arima_x11", transform = "none", mode = "additive", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "U-19b"
+label = "U-19 constant series through explicit regARIMA-X-11: (1,0,0)"
+frequencies = ["monthly"]
+length = { monthly = { min = 1, max = 780 } }
+series = ["SYN_U19"]
+configuration = { kind = "explicit_reg_arima_x11", transform = "none", mode = "additive", model = { regular = { p = 1, d = 0, q = 0 }, seasonal = { p = 0, d = 0, q = 0 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
+
+[[specs]]
+id = "U-19c"
+label = "U-19 constant series through explicit SEATS: airline (both-reject)"
+frequencies = ["monthly"]
+length = { monthly = { min = 1, max = 780 } }
+series = ["SYN_U19"]
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "none" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-20a"
+label = "U-20 model span after the series start, with backcasts and Easter near the calendar-year floor"
+frequencies = ["monthly"]
+length = { monthly = { min = 1, max = 780 } }
+series = ["SYN_U20"]
+configuration = { kind = "reg_arima", method = "x11", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 12, calendar = { easter = 8 }, model_span = "exclude_first_third" } }
+
+[[specs]]
+id = "U-20b"
+label = "U-20 without the model span (deviation)"
+frequencies = ["monthly"]
+length = { monthly = { min = 1, max = 780 } }
+series = ["SYN_U20"]
+configuration = { kind = "reg_arima", method = "x11", request = { transform = { kind = "explicit", transform = "log" }, model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 12, calendar = { easter = 8 } } }
+
+[[specs]]
+id = "U-21"
+label = "U-21 SEATS (0,0,0)(1,0,1) + constant on white noise: ChangeModel drops BQ, refit leaves Φ = 0"
+frequencies = ["quarterly"]
+length = { quarterly = { min = 1, max = 328 } }
+series = ["SYN_U21"]
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "none" }, model = { regular = { p = 0, d = 0, q = 0 }, seasonal = { p = 1, d = 0, q = 1 } }, include_constant = true, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-21b"
+label = "U-21b SEATS (0,0,1)(1,0,1) + constant on white noise: ChangeModel drops BQ, refit leaves Φ = 0 beside a regular MA"
+frequencies = ["quarterly"]
+length = { quarterly = { min = 1, max = 328 } }
+series = ["SYN_U21B"]
+configuration = { kind = "reg_arima", method = "seats", request = { transform = { kind = "explicit", transform = "none" }, model = { regular = { p = 0, d = 0, q = 1 }, seasonal = { p = 1, d = 0, q = 1 } }, include_constant = true, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0 } }
+
+[[specs]]
+id = "U-22"
+label = "x11+reg: pseudo-additive, log"
+frequencies = ["monthly", "quarterly"]
+requires_positive = true
+length = { monthly = { min = 1, max = 780 }, quarterly = { min = 1, max = 336 } }
+configuration = { kind = "explicit_reg_arima_x11", transform = "log", mode = "pseudo_additive", model = { regular = { p = 0, d = 1, q = 1 }, seasonal = { p = 0, d = 1, q = 1 } }, include_constant = false, forecast_horizon = { kind = "one_year" }, backcast_horizon = 0, seasonal_filter = "s3x5" }
